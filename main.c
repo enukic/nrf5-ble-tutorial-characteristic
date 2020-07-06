@@ -639,8 +639,10 @@ static void bsp_event_handler(bsp_event_t event)
         default:
             break;
     }
-}
 
+
+
+}
 
 /**@brief Function for initializing the Advertising functionality.
  */
