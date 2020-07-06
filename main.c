@@ -113,7 +113,8 @@ ble_os_t m_our_service;
 
 
 // OUR_JOB: Step 3.G, Declare an app_timer id variable and define our timer interval and define a timer interval
-
+APP_TIMER_DEF(m_our_char_timer_id);
+#define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(1000) // 1000 ms intervals
 
 
 // Use UUIDs for service(s) used in your application.
@@ -145,11 +146,14 @@ void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
 
 
 // ALREADY_DONE_FOR_YOU: This is a timer event handler
-//static void timer_timeout_handler(void * p_context)
-//{
-//    // OUR_JOB: Step 3.F, Update temperature and characteristic value.
-
-//}
+static void timer_timeout_handler(void * p_context)
+{
+    // OUR_JOB: Step 3.F, Update temperature and characteristic value.
+    int32_t temperature = 0;   
+    sd_temp_get(&temperature);
+    our_temperature_characteristic_update(&m_our_service, &temperature);
+    nrf_gpio_pin_toggle(LED_4);
+}
 
 
 
@@ -263,7 +267,7 @@ static void timers_init(void)
 
 
     // OUR_JOB: Step 3.H, Initiate our timer
-		
+    app_timer_create(&m_our_char_timer_id, APP_TIMER_MODE_REPEATED, timer_timeout_handler);
 }
 
 
@@ -402,7 +406,7 @@ static void application_timers_start(void)
 {
 
     // OUR_JOB: Step 3.I, Start our timer
-		
+    app_timer_start(m_our_char_timer_id, OUR_CHAR_TIMER_INTERVAL, NULL);
 
 }
 
@@ -547,7 +551,7 @@ static void ble_stack_init(void)
     NRF_SDH_BLE_OBSERVER(m_ble_observer, APP_BLE_OBSERVER_PRIO, ble_evt_handler, NULL);
 
     //OUR_JOB: Step 3.C Call ble_our_service_on_ble_evt() to do housekeeping of ble connections related to our service and characteristics
-	
+    NRF_SDH_BLE_OBSERVER(m_our_service_observer, APP_BLE_OBSERVER_PRIO, ble_our_service_on_ble_evt, (void*) &m_our_service);
 	
 		
 

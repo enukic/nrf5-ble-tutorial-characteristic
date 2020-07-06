@@ -11,7 +11,18 @@ void ble_our_service_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
 {
   	ble_os_t * p_our_service =(ble_os_t *) p_context;  
 		// OUR_JOB: Step 3.D Implement switch case handling BLE events related to our service. 
-	
+	switch (p_ble_evt->header.evt_id)
+        {
+            case BLE_GAP_EVT_CONNECTED:
+                p_our_service->conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
+                break;
+            case BLE_GAP_EVT_DISCONNECTED:
+                p_our_service->conn_handle = BLE_CONN_HANDLE_INVALID;
+                break;
+            default:
+                // No implementation needed.
+                break;
+        }
 	
 }
 
@@ -110,7 +121,7 @@ void our_service_init(ble_os_t * p_our_service)
     APP_ERROR_CHECK(err_code);    
     
     // OUR_JOB: Step 3.B, Set our service connection handle to default value. I.e. an invalid handle since we are not yet in a connection.
-	
+    p_our_service->conn_handle = BLE_CONN_HANDLE_INVALID;
 
     // FROM_SERVICE_TUTORIAL: Add our service
 		err_code = sd_ble_gatts_service_add(BLE_GATTS_SRVC_TYPE_PRIMARY,
@@ -127,6 +138,20 @@ void our_service_init(ble_os_t * p_our_service)
 void our_temperature_characteristic_update(ble_os_t *p_our_service, int32_t *temperature_value)
 {
     // OUR_JOB: Step 3.E, Update characteristic value
+    if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)
+    {
+        uint16_t               len = 4;
+        ble_gatts_hvx_params_t hvx_params;
+        memset(&hvx_params, 0, sizeof(hvx_params));
+
+        hvx_params.handle = p_our_service->char_handles.value_handle;
+        hvx_params.type   = BLE_GATT_HVX_NOTIFICATION;
+        hvx_params.offset = 0;
+        hvx_params.p_len  = &len;
+        hvx_params.p_data = (uint8_t*)temperature_value;  
+
+        sd_ble_gatts_hvx(p_our_service->conn_handle, &hvx_params);
+    }
 
 
 }
