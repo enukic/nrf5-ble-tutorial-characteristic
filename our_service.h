@@ -12,6 +12,7 @@
 
 // ALREADY_DONE_FOR_YOU: Defining 16-bit characteristic UUID
 #define BLE_UUID_OUR_CHARACTERISTC_UUID          0xBEEF // Just a random, but recognizable value
+#define BLE_UUID_OUR_CHARACTERISTC_UUID2         0xB00B // Just a random, but recognizable value
 
 // This structure contains various status information for our service. 
 // The name is based on the naming convention used in Nordics SDKs. 

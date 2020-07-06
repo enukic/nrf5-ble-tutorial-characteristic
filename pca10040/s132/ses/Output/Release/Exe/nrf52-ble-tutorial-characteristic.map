@@ -5481,7 +5481,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xf4 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
  .debug_macro   0x0000000000000000       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
  .debug_macro   0x0000000000000000      0x343 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_macro   0x0000000000000000       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_macro   0x0000000000000000       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
  .group         0x0000000000000000        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/SEGGER_RTT.o
  .group         0x0000000000000000        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/SEGGER_RTT.o
  .group         0x0000000000000000        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/SEGGER_RTT.o
@@ -13256,7 +13256,7 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .init_rodata is too large to fit in FLASH memory segment)
                 0x00000000000262f0                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x00000000000262f0     0x6d60
+.text           0x00000000000262f0     0x6dd4
                 0x00000000000262f0                __text_start__ = .
  *(.text .text.* .glue_7t .glue_7 .gnu.linkonce.t.* .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x00000000000262f0        0x0 linker stubs
@@ -13686,598 +13686,598 @@ Linker script and memory map
                 0x00000000000293ec       0x18 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
                 0x00000000000293ec                ble_our_service_on_ble_evt
  .text.our_service_init
-                0x0000000000029404      0x128 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+                0x0000000000029404      0x19c Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
                 0x0000000000029404                our_service_init
  .text.our_temperature_characteristic_update
-                0x000000000002952c       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
-                0x000000000002952c                our_temperature_characteristic_update
+                0x00000000000295a0       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+                0x00000000000295a0                our_temperature_characteristic_update
  .text.sd_ble_gap_addr_get
-                0x0000000000029574        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000295e8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
  .text.sd_ble_gap_appearance_get
-                0x0000000000029578        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000295ec        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
  .text.sd_ble_gap_device_name_get
-                0x000000000002957c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000295f0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
  .text.sd_ble_uuid_encode
-                0x0000000000029580        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000295f4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
  .text.uuid_list_sized_encode
-                0x0000000000029584       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000295f8       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
  .text.uuid_list_encode
-                0x0000000000029630       0x38 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000296a4       0x38 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
  .text.ble_advdata_encode
-                0x0000000000029668      0x380 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
-                0x0000000000029668                ble_advdata_encode
+                0x00000000000296dc      0x380 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x00000000000296dc                ble_advdata_encode
  .text.ble_advdata_search
-                0x00000000000299e8       0x38 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
-                0x00000000000299e8                ble_advdata_search
+                0x0000000000029a5c       0x38 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x0000000000029a5c                ble_advdata_search
  .text.ble_advdata_parse
-                0x0000000000029a20       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
-                0x0000000000029a20                ble_advdata_parse
+                0x0000000000029a94       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+                0x0000000000029a94                ble_advdata_parse
  .text.sd_ble_gap_adv_set_configure
-                0x0000000000029a40        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029ab4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
  .text.sd_ble_gap_adv_start
-                0x0000000000029a44        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029ab8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
  .text.sd_ble_gap_adv_stop
-                0x0000000000029a48        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029abc        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
  .text.flags_set
-                0x0000000000029a4c       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029ac0       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
  .text.ble_advertising_conn_cfg_tag_set
-                0x0000000000029a78        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
-                0x0000000000029a78                ble_advertising_conn_cfg_tag_set
+                0x0000000000029aec        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029aec                ble_advertising_conn_cfg_tag_set
  .text.ble_advertising_init
-                0x0000000000029a7e       0xe4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
-                0x0000000000029a7e                ble_advertising_init
+                0x0000000000029af2       0xe4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029af2                ble_advertising_init
  .text.ble_advertising_start
-                0x0000000000029b62      0x22c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
-                0x0000000000029b62                ble_advertising_start
+                0x0000000000029bd6      0x22c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029bd6                ble_advertising_start
  .text.ble_advertising_on_ble_evt
-                0x0000000000029d8e       0x6a Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
-                0x0000000000029d8e                ble_advertising_on_ble_evt
+                0x0000000000029e02       0x6a Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029e02                ble_advertising_on_ble_evt
  .text.ble_advertising_on_sys_evt
-                0x0000000000029df8       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
-                0x0000000000029df8                ble_advertising_on_sys_evt
+                0x0000000000029e6c       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029e6c                ble_advertising_on_sys_evt
  .text.ble_advertising_restart_without_whitelist
-                0x0000000000029e20       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
-                0x0000000000029e20                ble_advertising_restart_without_whitelist
+                0x0000000000029e94       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+                0x0000000000029e94                ble_advertising_restart_without_whitelist
  .text.sd_ble_gap_conn_param_update
-                0x0000000000029e5c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029ed0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.sd_ble_gap_disconnect
-                0x0000000000029e60        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029ed4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.sd_ble_gap_ppcp_set
-                0x0000000000029e64        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029ed8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.sd_ble_gap_ppcp_get
-                0x0000000000029e68        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029edc        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.instance_get
-                0x0000000000029e6c       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029ee0       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.send_error_evt
-                0x0000000000029e80       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029ef4       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.update_timeout_handler
-                0x0000000000029e90       0x6c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029f04       0x6c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.conn_params_negotiation
-                0x0000000000029efc       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029f70       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.is_conn_params_ok.constprop.0
-                0x0000000000029f44       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029fb8       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.ble_evt_handler
-                0x0000000000029f78       0xe0 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x0000000000029fec       0xe0 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .text.ble_conn_params_init
-                0x000000000002a058       0x74 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
-                0x000000000002a058                ble_conn_params_init
+                0x000000000002a0cc       0x74 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x000000000002a0cc                ble_conn_params_init
  .text.for_each_set_flag
-                0x000000000002a0cc       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a140       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
  .text.conn_handle_list_get
-                0x000000000002a100       0x2e Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a100                conn_handle_list_get
- *fill*         0x000000000002a12e        0x2 
+                0x000000000002a174       0x2e Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a174                conn_handle_list_get
+ *fill*         0x000000000002a1a2        0x2 
  .text.ble_evt_handler
-                0x000000000002a130       0xd4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a1a4       0xd4 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
  .text.ble_conn_state_valid
-                0x000000000002a204       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a204                ble_conn_state_valid
+                0x000000000002a278       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a278                ble_conn_state_valid
  .text.ble_conn_state_role
-                0x000000000002a218       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a218                ble_conn_state_role
+                0x000000000002a28c       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a28c                ble_conn_state_role
  .text.ble_conn_state_encrypted
-                0x000000000002a23c       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a23c                ble_conn_state_encrypted
+                0x000000000002a2b0       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a2b0                ble_conn_state_encrypted
  .text.ble_conn_state_user_flag_acquire
-                0x000000000002a260       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a260                ble_conn_state_user_flag_acquire
+                0x000000000002a2d4       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a2d4                ble_conn_state_user_flag_acquire
  .text.ble_conn_state_user_flag_get
-                0x000000000002a274       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a274                ble_conn_state_user_flag_get
+                0x000000000002a2e8       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a2e8                ble_conn_state_user_flag_get
  .text.ble_conn_state_user_flag_set
-                0x000000000002a2a4       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a2a4                ble_conn_state_user_flag_set
+                0x000000000002a318       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a318                ble_conn_state_user_flag_set
  .text.ble_conn_state_for_each_set_user_flag
-                0x000000000002a2e0       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
-                0x000000000002a2e0                ble_conn_state_for_each_set_user_flag
+                0x000000000002a354       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002a354                ble_conn_state_for_each_set_user_flag
  .text.ble_srv_is_notification_enabled
-                0x000000000002a314        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
-                0x000000000002a314                ble_srv_is_notification_enabled
+                0x000000000002a388        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+                0x000000000002a388                ble_srv_is_notification_enabled
  .text.evt_send
-                0x000000000002a31c       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a390       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.send_unexpected_error
-                0x000000000002a332       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- *fill*         0x000000000002a35a        0x2 
+                0x000000000002a3a6       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ *fill*         0x000000000002a3ce        0x2 
  .text.local_db_apply_in_evt
-                0x000000000002a35c       0x6c Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a3d0       0x6c Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.apply_pending_handle
-                0x000000000002a3c8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a43c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.service_changed_pending_flags_check
-                0x000000000002a3cc       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a440       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.update_pending_flags_check
-                0x000000000002a3e0       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a454       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.sc_send_pending_handle
-                0x000000000002a3f4       0x98 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a468       0x98 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.db_update_pending_handle
-                0x000000000002a48c       0x84 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a500       0x84 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
  .text.gcm_im_evt_handler
-                0x000000000002a510       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
-                0x000000000002a510                gcm_im_evt_handler
+                0x000000000002a584       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a584                gcm_im_evt_handler
  .text.gcm_pdb_evt_handler
-                0x000000000002a53c       0x80 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
-                0x000000000002a53c                gcm_pdb_evt_handler
+                0x000000000002a5b0       0x80 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a5b0                gcm_pdb_evt_handler
  .text.gcm_init
-                0x000000000002a5bc       0x5c Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
-                0x000000000002a5bc                gcm_init
+                0x000000000002a630       0x5c Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a630                gcm_init
  .text.gcm_ble_evt_handler
-                0x000000000002a618       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
-                0x000000000002a618                gcm_ble_evt_handler
+                0x000000000002a68c       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+                0x000000000002a68c                gcm_ble_evt_handler
  .text.sd_ble_gatts_service_changed
-                0x000000000002a6c4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a738        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .text.sd_ble_gatts_sys_attr_set
-                0x000000000002a6c8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a73c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .text.sd_ble_gatts_sys_attr_get
-                0x000000000002a6cc        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a740        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .text.sd_ble_gatts_initial_user_handle_get
-                0x000000000002a6d0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a744        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .text.service_changed_pending_set
-                0x000000000002a6d4       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a748       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .text.gscm_pdb_evt_handler
-                0x000000000002a71c       0x18 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a71c                gscm_pdb_evt_handler
+                0x000000000002a790       0x18 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a790                gscm_pdb_evt_handler
  .text.gscm_init
-                0x000000000002a734       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a734                gscm_init
+                0x000000000002a7a8       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a7a8                gscm_init
  .text.gscm_local_db_cache_update
-                0x000000000002a744       0x8a Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a744                gscm_local_db_cache_update
+                0x000000000002a7b8       0x8a Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a7b8                gscm_local_db_cache_update
  .text.gscm_local_db_cache_apply
-                0x000000000002a7ce       0x80 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a7ce                gscm_local_db_cache_apply
+                0x000000000002a842       0x80 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a842                gscm_local_db_cache_apply
  .text.gscm_service_changed_ind_needed
-                0x000000000002a84e       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a84e                gscm_service_changed_ind_needed
- *fill*         0x000000000002a872        0x2 
+                0x000000000002a8c2       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a8c2                gscm_service_changed_ind_needed
+ *fill*         0x000000000002a8e6        0x2 
  .text.gscm_service_changed_ind_send
-                0x000000000002a874       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a874                gscm_service_changed_ind_send
+                0x000000000002a8e8       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a8e8                gscm_service_changed_ind_send
  .text.gscm_db_change_notification_done
-                0x000000000002a8a8       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
-                0x000000000002a8a8                gscm_db_change_notification_done
+                0x000000000002a91c       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002a91c                gscm_db_change_notification_done
  .text.sd_ecb_block_encrypt
-                0x000000000002a8cc        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002a940        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
  .text.get_free_connection
-                0x000000000002a8d0       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002a8d0                get_free_connection
+                0x000000000002a944       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002a944                get_free_connection
  .text.get_connection_by_conn_handle
-                0x000000000002a8fc       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002a8fc                get_connection_by_conn_handle
+                0x000000000002a970       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002a970                get_connection_by_conn_handle
  .text.new_connection
-                0x000000000002a930       0x58 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002a930                new_connection
+                0x000000000002a9a4       0x58 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002a9a4                new_connection
  .text.is_valid_irk
-                0x000000000002a988       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002a988                is_valid_irk
+                0x000000000002a9fc       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002a9fc                is_valid_irk
  .text.addr_compare
-                0x000000000002a99e       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002a99e                addr_compare
+                0x000000000002aa12       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002aa12                addr_compare
  .text.im_is_duplicate_bonding_data
-                0x000000000002a9c6       0x5e Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002a9c6                im_is_duplicate_bonding_data
+                0x000000000002aa3a       0x5e Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002aa3a                im_is_duplicate_bonding_data
  .text.im_find_duplicate_bonding_data
-                0x000000000002aa24       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002aa24                im_find_duplicate_bonding_data
- .text.im_init  0x000000000002aa60       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002aa60                im_init
+                0x000000000002aa98       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002aa98                im_find_duplicate_bonding_data
+ .text.im_init  0x000000000002aad4       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002aad4                im_init
  .text.im_peer_id_get_by_conn_handle
-                0x000000000002aa94       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002aa94                im_peer_id_get_by_conn_handle
+                0x000000000002ab08       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ab08                im_peer_id_get_by_conn_handle
  .text.im_ble_addr_get
-                0x000000000002aab4       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002aab4                im_ble_addr_get
+                0x000000000002ab28       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ab28                im_ble_addr_get
  .text.im_conn_handle_get
-                0x000000000002aae4       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002aae4                im_conn_handle_get
+                0x000000000002ab58       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ab58                im_conn_handle_get
  .text.im_master_id_is_valid
-                0x000000000002ab0c       0x1a Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002ab0c                im_master_id_is_valid
+                0x000000000002ab80       0x1a Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ab80                im_master_id_is_valid
  .text.im_master_ids_compare
-                0x000000000002ab26       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002ab26                im_master_ids_compare
+                0x000000000002ab9a       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ab9a                im_master_ids_compare
  .text.im_peer_id_get_by_master_id
-                0x000000000002ab4e       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002ab4e                im_peer_id_get_by_master_id
- *fill*         0x000000000002ab8e        0x2 
+                0x000000000002abc2       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002abc2                im_peer_id_get_by_master_id
+ *fill*         0x000000000002ac02        0x2 
  .text.im_new_peer_id
-                0x000000000002ab90       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002ab90                im_new_peer_id
+                0x000000000002ac04       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ac04                im_new_peer_id
  .text.im_peer_free
-                0x000000000002abac       0x38 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002abac                im_peer_free
- .text.ah       0x000000000002abe4       0x54 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002abe4                ah
+                0x000000000002ac20       0x38 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ac20                im_peer_free
+ .text.ah       0x000000000002ac58       0x54 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002ac58                ah
  .text.im_address_resolve
-                0x000000000002ac38       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002ac38                im_address_resolve
+                0x000000000002acac       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002acac                im_address_resolve
  .text.im_ble_evt_handler
-                0x000000000002ac80       0xd4 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
-                0x000000000002ac80                im_ble_evt_handler
+                0x000000000002acf4       0xd4 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+                0x000000000002acf4                im_ble_evt_handler
  .text.sd_ble_gap_data_length_update
-                0x000000000002ad54        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+                0x000000000002adc8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
  .text.sd_ble_gattc_exchange_mtu_request
-                0x000000000002ad58        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+                0x000000000002adcc        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
  .text.sd_ble_gatts_exchange_mtu_reply
-                0x000000000002ad5c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+                0x000000000002add0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
  .text.data_length_update
-                0x000000000002ad60       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+                0x000000000002add4       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
  .text.nrf_ble_gatt_init
-                0x000000000002ad82       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
-                0x000000000002ad82                nrf_ble_gatt_init
+                0x000000000002adf6       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+                0x000000000002adf6                nrf_ble_gatt_init
  .text.nrf_ble_gatt_on_ble_evt
-                0x000000000002ada8      0x122 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
-                0x000000000002ada8                nrf_ble_gatt_on_ble_evt
+                0x000000000002ae1c      0x122 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+                0x000000000002ae1c                nrf_ble_gatt_on_ble_evt
  .text.sd_ble_gatts_rw_authorize_reply
-                0x000000000002aeca        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+                0x000000000002af3e        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
  .text.sd_ble_user_mem_reply
-                0x000000000002aece        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+                0x000000000002af42        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
  .text.user_mem_reply.part.0
-                0x000000000002aed2       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+                0x000000000002af46       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
  .text.nrf_ble_qwr_init
-                0x000000000002aef6       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
-                0x000000000002aef6                nrf_ble_qwr_init
+                0x000000000002af6a       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+                0x000000000002af6a                nrf_ble_qwr_init
  .text.nrf_ble_qwr_conn_handle_assign
-                0x000000000002af1a       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
-                0x000000000002af1a                nrf_ble_qwr_conn_handle_assign
+                0x000000000002af8e       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+                0x000000000002af8e                nrf_ble_qwr_conn_handle_assign
  .text.nrf_ble_qwr_on_ble_evt
-                0x000000000002af30       0xa0 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
-                0x000000000002af30                nrf_ble_qwr_on_ble_evt
+                0x000000000002afa4       0xa0 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+                0x000000000002afa4                nrf_ble_qwr_on_ble_evt
  .text.peer_data_id_is_valid
-                0x000000000002afd0       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b044       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
  .text.pds_evt_send
-                0x000000000002afe0        0xa Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- *fill*         0x000000000002afea        0x2 
+                0x000000000002b054        0xa Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ *fill*         0x000000000002b05e        0x2 
  .text.peer_data_delete_process
-                0x000000000002afec       0x84 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b060       0x84 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
  .text.fds_evt_handler
-                0x000000000002b070       0xc8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b0e4       0xc8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
  .text.peer_data_find
-                0x000000000002b138       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b1ac       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
  .text.pds_init
-                0x000000000002b168       0x64 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b168                pds_init
+                0x000000000002b1dc       0x64 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b1dc                pds_init
  .text.pds_peer_data_read
-                0x000000000002b1cc       0x6c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b1cc                pds_peer_data_read
+                0x000000000002b240       0x6c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b240                pds_peer_data_read
  .text.pds_peer_data_iterate_prepare
-                0x000000000002b238       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b238                pds_peer_data_iterate_prepare
+                0x000000000002b2ac       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b2ac                pds_peer_data_iterate_prepare
  .text.pds_peer_data_iterate
-                0x000000000002b248       0x5c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b248                pds_peer_data_iterate
+                0x000000000002b2bc       0x5c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b2bc                pds_peer_data_iterate
  .text.pds_space_reserve
-                0x000000000002b2a4       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b2a4                pds_space_reserve
+                0x000000000002b318       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b318                pds_space_reserve
  .text.pds_space_reserve_cancel
-                0x000000000002b2d0       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b2d0                pds_space_reserve_cancel
+                0x000000000002b344       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b344                pds_space_reserve_cancel
  .text.pds_peer_data_store
-                0x000000000002b2e6       0xa4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b2e6                pds_peer_data_store
+                0x000000000002b35a       0xa4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b35a                pds_peer_data_store
  .text.pds_peer_id_allocate
-                0x000000000002b38a        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b38a                pds_peer_id_allocate
+                0x000000000002b3fe        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b3fe                pds_peer_id_allocate
  .text.pds_peer_id_free
-                0x000000000002b392       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b392                pds_peer_id_free
+                0x000000000002b406       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b406                pds_peer_id_free
  .text.pds_peer_id_is_allocated
-                0x000000000002b3a8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b3a8                pds_peer_id_is_allocated
+                0x000000000002b41c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b41c                pds_peer_id_is_allocated
  .text.pds_next_peer_id_get
-                0x000000000002b3ac        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b3ac                pds_next_peer_id_get
+                0x000000000002b420        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b420                pds_next_peer_id_get
  .text.pds_next_deleted_peer_id_get
-                0x000000000002b3b0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
-                0x000000000002b3b0                pds_next_deleted_peer_id_get
+                0x000000000002b424        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+                0x000000000002b424                pds_next_deleted_peer_id_get
  .text.write_buffer_record_find_next
-                0x000000000002b3b4       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b428       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
  .text.write_buffer_record_find
-                0x000000000002b3d8       0x32 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b44c       0x32 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
  .text.pdb_evt_send
-                0x000000000002b40a       0x1e Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b47e       0x1e Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
  .text.write_buf_length_words_set
-                0x000000000002b428       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b49c       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
  .text.write_buffer_record_release
-                0x000000000002b450       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b4c4       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
  .text.write_buf_store
-                0x000000000002b490       0x98 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b490                write_buf_store
+                0x000000000002b504       0x98 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b504                write_buf_store
  .text.pdb_pds_evt_handler
-                0x000000000002b528       0xf0 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b528                pdb_pds_evt_handler
+                0x000000000002b59c       0xf0 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b59c                pdb_pds_evt_handler
  .text.pdb_init
-                0x000000000002b618       0x64 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b618                pdb_init
+                0x000000000002b68c       0x64 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b68c                pdb_init
  .text.pdb_peer_allocate
-                0x000000000002b67c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b67c                pdb_peer_allocate
+                0x000000000002b6f0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b6f0                pdb_peer_allocate
  .text.pdb_peer_data_ptr_get
-                0x000000000002b680        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b680                pdb_peer_data_ptr_get
- *fill*         0x000000000002b686        0x2 
+                0x000000000002b6f4        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b6f4                pdb_peer_data_ptr_get
+ *fill*         0x000000000002b6fa        0x2 
  .text.pdb_write_buf_get
-                0x000000000002b688       0xcc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b688                pdb_write_buf_get
+                0x000000000002b6fc       0xcc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b6fc                pdb_write_buf_get
  .text.pdb_write_buf_release
-                0x000000000002b754       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b754                pdb_write_buf_release
+                0x000000000002b7c8       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b7c8                pdb_write_buf_release
  .text.pdb_peer_free
-                0x000000000002b77c       0x44 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b77c                pdb_peer_free
+                0x000000000002b7f0       0x44 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b7f0                pdb_peer_free
  .text.pdb_write_buf_store_prepare
-                0x000000000002b7c0       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b7c0                pdb_write_buf_store_prepare
+                0x000000000002b834       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b834                pdb_write_buf_store_prepare
  .text.pdb_write_buf_store
-                0x000000000002b820       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b820                pdb_write_buf_store
+                0x000000000002b894       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b894                pdb_write_buf_store
  .text.pdb_next_peer_id_get
-                0x000000000002b846        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b846                pdb_next_peer_id_get
+                0x000000000002b8ba        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b8ba                pdb_next_peer_id_get
  .text.pdb_next_deleted_peer_id_get
-                0x000000000002b84a        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b84a                pdb_next_deleted_peer_id_get
+                0x000000000002b8be        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b8be                pdb_next_deleted_peer_id_get
  .text.pdb_peer_data_load
-                0x000000000002b84e       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b84e                pdb_peer_data_load
+                0x000000000002b8c2       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b8c2                pdb_peer_data_load
  .text.pdb_raw_store
-                0x000000000002b862        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
-                0x000000000002b862                pdb_raw_store
- .text.claim    0x000000000002b86a       0x36 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b8d6        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+                0x000000000002b8d6                pdb_raw_store
+ .text.claim    0x000000000002b8de       0x36 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
  .text.peer_id_init
-                0x000000000002b8a0       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b8a0                peer_id_init
+                0x000000000002b914       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b914                peer_id_init
  .text.peer_id_allocate
-                0x000000000002b8cc        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b8cc                peer_id_allocate
+                0x000000000002b940        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b940                peer_id_allocate
  .text.peer_id_delete
-                0x000000000002b8d8       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b8d8                peer_id_delete
+                0x000000000002b94c       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b94c                peer_id_delete
  .text.peer_id_free
-                0x000000000002b8fc       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b8fc                peer_id_free
+                0x000000000002b970       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b970                peer_id_free
  .text.peer_id_is_allocated
-                0x000000000002b928       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b928                peer_id_is_allocated
+                0x000000000002b99c       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b99c                peer_id_is_allocated
  .text.peer_id_is_deleted
-                0x000000000002b93c       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b93c                peer_id_is_deleted
+                0x000000000002b9b0       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b9b0                peer_id_is_deleted
  .text.next_id_get
-                0x000000000002b950       0x32 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b950                next_id_get
- *fill*         0x000000000002b982        0x2 
+                0x000000000002b9c4       0x32 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b9c4                next_id_get
+ *fill*         0x000000000002b9f6        0x2 
  .text.peer_id_get_next_used
-                0x000000000002b984       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b984                peer_id_get_next_used
+                0x000000000002b9f8       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002b9f8                peer_id_get_next_used
  .text.peer_id_get_next_deleted
-                0x000000000002b9b8        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
-                0x000000000002b9b8                peer_id_get_next_deleted
+                0x000000000002ba2c        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+                0x000000000002ba2c                peer_id_get_next_deleted
  .text.evt_send
-                0x000000000002b9c4       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002ba38       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
  .text.ble_evt_handler
-                0x000000000002b9ec       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002ba60       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
  .text.pm_sm_evt_handler
-                0x000000000002ba10        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002ba10                pm_sm_evt_handler
+                0x000000000002ba84        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002ba84                pm_sm_evt_handler
  .text.pm_gcm_evt_handler
-                0x000000000002ba18        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002ba18                pm_gcm_evt_handler
+                0x000000000002ba8c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002ba8c                pm_gcm_evt_handler
  .text.pm_im_evt_handler
-                0x000000000002ba1c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002ba1c                pm_im_evt_handler
- .text.pm_init  0x000000000002ba20       0x64 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002ba20                pm_init
+                0x000000000002ba90        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002ba90                pm_im_evt_handler
+ .text.pm_init  0x000000000002ba94       0x64 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002ba94                pm_init
  .text.pm_register
-                0x000000000002ba84       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002ba84                pm_register
+                0x000000000002baf8       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002baf8                pm_register
  .text.pm_sec_params_set
-                0x000000000002bab4       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002bab4                pm_sec_params_set
+                0x000000000002bb28       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bb28                pm_sec_params_set
  .text.pm_conn_sec_config_reply
-                0x000000000002bac8        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002bac8                pm_conn_sec_config_reply
+                0x000000000002bb3c        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bb3c                pm_conn_sec_config_reply
  .text.pm_peer_delete
-                0x000000000002bad0       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002bad0                pm_peer_delete
+                0x000000000002bb44       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bb44                pm_peer_delete
  .text.pm_peers_delete
-                0x000000000002bae4       0x74 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002bae4                pm_peers_delete
+                0x000000000002bb58       0x74 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bb58                pm_peers_delete
  .text.pm_peer_ranks_get
-                0x000000000002bb58       0xbc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002bb58                pm_peer_ranks_get
+                0x000000000002bbcc       0xbc Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bbcc                pm_peer_ranks_get
  .text.rank_vars_update
-                0x000000000002bc14       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bc88       0x2c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
  .text.pm_pdb_evt_handler
-                0x000000000002bc40      0x134 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
-                0x000000000002bc40                pm_pdb_evt_handler
+                0x000000000002bcb4      0x134 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002bcb4                pm_pdb_evt_handler
  .text.pm_buffer_init
-                0x000000000002bd74       0x3a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
-                0x000000000002bd74                pm_buffer_init
+                0x000000000002bde8       0x3a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+                0x000000000002bde8                pm_buffer_init
  .text.pm_buffer_ptr_get
-                0x000000000002bdae       0x2e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
-                0x000000000002bdae                pm_buffer_ptr_get
+                0x000000000002be22       0x2e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+                0x000000000002be22                pm_buffer_ptr_get
  .text.pm_buffer_release
-                0x000000000002bddc       0x2e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
-                0x000000000002bddc                pm_buffer_release
+                0x000000000002be50       0x2e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+                0x000000000002be50                pm_buffer_release
  .text.pm_buffer_block_acquire
-                0x000000000002be0a       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
-                0x000000000002be0a                pm_buffer_block_acquire
+                0x000000000002be7e       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+                0x000000000002be7e                pm_buffer_block_acquire
  .text.pm_mutex_init
-                0x000000000002be6a        0xe Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
-                0x000000000002be6a                pm_mutex_init
+                0x000000000002bede        0xe Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+                0x000000000002bede                pm_mutex_init
  .text.pm_mutex_lock
-                0x000000000002be78       0x4a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
-                0x000000000002be78                pm_mutex_lock
+                0x000000000002beec       0x4a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+                0x000000000002beec                pm_mutex_lock
  .text.pm_mutex_unlock
-                0x000000000002bec2       0x3a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
-                0x000000000002bec2                pm_mutex_unlock
+                0x000000000002bf36       0x3a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+                0x000000000002bf36                pm_mutex_unlock
  .text.pm_mutex_lock_first_available
-                0x000000000002befc       0x70 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
-                0x000000000002befc                pm_mutex_lock_first_available
+                0x000000000002bf70       0x70 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+                0x000000000002bf70                pm_mutex_lock_first_available
  .text.pm_mutex_lock_status_get
-                0x000000000002bf6c       0x1e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
-                0x000000000002bf6c                pm_mutex_lock_status_get
+                0x000000000002bfe0       0x1e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+                0x000000000002bfe0                pm_mutex_lock_status_get
  .text.sd_ble_gap_authenticate
-                0x000000000002bf8a        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002bffe        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.sd_ble_gap_sec_params_reply
-                0x000000000002bf8e        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c002        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.sd_ble_gap_sec_info_reply
-                0x000000000002bf92        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c006        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.flag_id_init
-                0x000000000002bf96       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c00a       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.evt_send
-                0x000000000002bfa8       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c01c       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.send_config_req
-                0x000000000002bfbe       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c032       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.send_unexpected_error
-                0x000000000002bfe4       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c058       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.conn_sec_failure
-                0x000000000002c00c       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c080       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.sec_proc_start.part.0
-                0x000000000002c054       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c0c8       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.link_secure_failure.part.0
-                0x000000000002c0b4       0x8c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c128       0x8c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
  .text.smd_conn_sec_config_reply
-                0x000000000002c140       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
-                0x000000000002c140                smd_conn_sec_config_reply
+                0x000000000002c1b4       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c1b4                smd_conn_sec_config_reply
  .text.smd_init
-                0x000000000002c150       0x70 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
-                0x000000000002c150                smd_init
+                0x000000000002c1c4       0x70 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c1c4                smd_init
  .text.smd_params_reply
-                0x000000000002c1c0      0x178 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
-                0x000000000002c1c0                smd_params_reply
+                0x000000000002c234      0x178 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c234                smd_params_reply
  .text.smd_link_secure
-                0x000000000002c338       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
-                0x000000000002c338                smd_link_secure
- *fill*         0x000000000002c35e        0x2 
+                0x000000000002c3ac       0x26 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c3ac                smd_link_secure
+ *fill*         0x000000000002c3d2        0x2 
  .text.smd_ble_evt_handler
-                0x000000000002c360      0x2a8 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
-                0x000000000002c360                smd_ble_evt_handler
+                0x000000000002c3d4      0x2a8 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+                0x000000000002c3d4                smd_ble_evt_handler
  .text.sec_params_verify
-                0x000000000002c608       0x5c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c67c       0x5c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
  .text.flag_id_init
-                0x000000000002c664       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c6d8       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
  .text.events_send_from_err_code.part.0
-                0x000000000002c676       0x70 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c6ea       0x70 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
  .text.params_req_send
-                0x000000000002c6e6       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- *fill*         0x000000000002c70e        0x2 
+                0x000000000002c75a       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ *fill*         0x000000000002c782        0x2 
  .text.link_secure
-                0x000000000002c710      0x13c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c784      0x13c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
  .text.link_secure_pending_handle
-                0x000000000002c84c       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c8c0       0x34 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
  .text.smd_params_reply_perform
-                0x000000000002c880       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c8f4       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
  .text.params_reply_pending_handle
-                0x000000000002c92c        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- *fill*         0x000000000002c932        0x2 
+                0x000000000002c9a0        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ *fill*         0x000000000002c9a6        0x2 
  .text.sm_smd_evt_handler
-                0x000000000002c934       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
-                0x000000000002c934                sm_smd_evt_handler
+                0x000000000002c9a8       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002c9a8                sm_smd_evt_handler
  .text.sm_pdb_evt_handler
-                0x000000000002c994       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
-                0x000000000002c994                sm_pdb_evt_handler
- .text.sm_init  0x000000000002c9f4       0x4c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
-                0x000000000002c9f4                sm_init
+                0x000000000002ca08       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002ca08                sm_pdb_evt_handler
+ .text.sm_init  0x000000000002ca68       0x4c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002ca68                sm_init
  .text.sm_ble_evt_handler
-                0x000000000002ca40       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
-                0x000000000002ca40                sm_ble_evt_handler
+                0x000000000002cab4       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002cab4                sm_ble_evt_handler
  .text.sm_sec_params_set
-                0x000000000002ca60       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
-                0x000000000002ca60                sm_sec_params_set
+                0x000000000002cad4       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002cad4                sm_sec_params_set
  .text.sm_conn_sec_config_reply
-                0x000000000002ca9c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
-                0x000000000002ca9c                sm_conn_sec_config_reply
+                0x000000000002cb10        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+                0x000000000002cb10                sm_conn_sec_config_reply
  .text.sd_softdevice_enable
-                0x000000000002caa0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cb14        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .text.sd_softdevice_disable
-                0x000000000002caa4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cb18        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .text.sdh_request_observer_notify
-                0x000000000002caa8       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cb1c       0x30 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .text.sdh_state_observer_notify
-                0x000000000002cad8       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cb4c       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .text.softdevices_evt_irq_enable
-                0x000000000002cb00       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cb74       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .text.softdevice_evt_irq_disable
-                0x000000000002cb3c       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cbb0       0x24 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .text.nrf_sdh_enable_request
-                0x000000000002cb60       0x8c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
-                0x000000000002cb60                nrf_sdh_enable_request
+                0x000000000002cbd4       0x8c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cbd4                nrf_sdh_enable_request
  .text.nrf_sdh_disable_request
-                0x000000000002cbec       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
-                0x000000000002cbec                nrf_sdh_disable_request
+                0x000000000002cc60       0x60 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cc60                nrf_sdh_disable_request
  .text.nrf_sdh_request_continue
-                0x000000000002cc4c       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
-                0x000000000002cc4c                nrf_sdh_request_continue
+                0x000000000002ccc0       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002ccc0                nrf_sdh_request_continue
  .text.nrf_sdh_is_enabled
-                0x000000000002cc6c        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
-                0x000000000002cc6c                nrf_sdh_is_enabled
+                0x000000000002cce0        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cce0                nrf_sdh_is_enabled
  .text.nrf_sdh_evts_poll
-                0x000000000002cc78       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
-                0x000000000002cc78                nrf_sdh_evts_poll
+                0x000000000002ccec       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002ccec                nrf_sdh_evts_poll
  .text.SWI2_EGU2_IRQHandler
-                0x000000000002cca0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
-                0x000000000002cca0                SWI2_EGU2_IRQHandler
+                0x000000000002cd14        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002cd14                SWI2_EGU2_IRQHandler
  .text.sd_ble_enable
-                0x000000000002cca4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002cd18        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .text.sd_ble_cfg_set
-                0x000000000002cca8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002cd1c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .text.sd_ble_evt_get
-                0x000000000002ccac        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002cd20        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .text.nrf_sdh_ble_evts_poll
-                0x000000000002ccb0       0x50 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002cd24       0x50 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .text.nrf_sdh_ble_default_cfg_set
-                0x000000000002cd00       0xb0 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
-                0x000000000002cd00                nrf_sdh_ble_default_cfg_set
+                0x000000000002cd74       0xb0 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002cd74                nrf_sdh_ble_default_cfg_set
  .text.nrf_sdh_ble_enable
-                0x000000000002cdb0       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
-                0x000000000002cdb0                nrf_sdh_ble_enable
+                0x000000000002ce24       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002ce24                nrf_sdh_ble_enable
  .text.sd_evt_get
-                0x000000000002cdc4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+                0x000000000002ce38        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
  .text.nrf_sdh_soc_evts_poll
-                0x000000000002cdc8       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+                0x000000000002ce3c       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
  .text.libc.__int64_udivmod
-                0x000000000002ce04       0xce C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc_asm.o)
-                0x000000000002ce04                __aeabi_uldivmod
-                0x000000000002ce04                __int64_udiv
-                0x000000000002ce04                __udivdi3
-                0x000000000002ce04                __int64_udivmod
+                0x000000000002ce78       0xce C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc_asm.o)
+                0x000000000002ce78                __aeabi_uldivmod
+                0x000000000002ce78                __int64_udiv
+                0x000000000002ce78                __udivdi3
+                0x000000000002ce78                __int64_udivmod
  .text.libc.memcmp
-                0x000000000002ced2       0x66 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x000000000002ced2                memcmp
+                0x000000000002cf46       0x66 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x000000000002cf46                memcmp
  .text.libc.memcpy
-                0x000000000002cf38       0x52 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x000000000002cf38                __aeabi_memcpy
-                0x000000000002cf38                memcpy
-                0x000000000002cf44                __aeabi_memcpy8
-                0x000000000002cf44                __aeabi_memcpy4
+                0x000000000002cfac       0x52 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x000000000002cfac                __aeabi_memcpy
+                0x000000000002cfac                memcpy
+                0x000000000002cfb8                __aeabi_memcpy8
+                0x000000000002cfb8                __aeabi_memcpy4
  .text.libc.memset
-                0x000000000002cf8a       0x66 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x000000000002cf8a                memset
+                0x000000000002cffe       0x66 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x000000000002cffe                memset
  .text.libc.strlen
-                0x000000000002cff0       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x000000000002cff0                strlen
-                0x000000000002d050                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x0000000000006d60                __text_size__ = SIZEOF (.text)
-                0x000000000002d050                __text_load_end__ = __text_end__
+                0x000000000002d064       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x000000000002d064                strlen
+                0x000000000002d0c4                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x0000000000006dd4                __text_size__ = SIZEOF (.text)
+                0x000000000002d0c4                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -14288,183 +14288,183 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .text is too large to fit in FLASH memory segment)
-                0x000000000002d050                __sdh_soc_observers_load_start__ = ALIGN (__text_end__, 0x4)
+                0x000000000002d0c4                __sdh_soc_observers_load_start__ = ALIGN (__text_end__, 0x4)
 
 .sdh_soc_observers
-                0x000000000002d050       0x18
-                0x000000000002d050                __sdh_soc_observers_start__ = .
-                0x000000000002d050                __start_sdh_soc_observers = __sdh_soc_observers_start__
+                0x000000000002d0c4       0x18
+                0x000000000002d0c4                __sdh_soc_observers_start__ = .
+                0x000000000002d0c4                __start_sdh_soc_observers = __sdh_soc_observers_start__
  *(SORT_BY_NAME(.sdh_soc_observers*))
  .sdh_soc_observers0
-                0x000000000002d050        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
+                0x000000000002d0c4        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
  .sdh_soc_observers0
-                0x000000000002d058        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_drv_clock.o
+                0x000000000002d0cc        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_drv_clock.o
  .sdh_soc_observers1
-                0x000000000002d060        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
-                0x000000000002d068                __sdh_soc_observers_end__ = (__sdh_soc_observers_start__ + SIZEOF (.sdh_soc_observers))
+                0x000000000002d0d4        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+                0x000000000002d0dc                __sdh_soc_observers_end__ = (__sdh_soc_observers_start__ + SIZEOF (.sdh_soc_observers))
                 0x0000000000000018                __sdh_soc_observers_size__ = SIZEOF (.sdh_soc_observers)
-                0x000000000002d068                __stop_sdh_soc_observers = __sdh_soc_observers_end__
-                0x000000000002d068                __sdh_soc_observers_load_end__ = __sdh_soc_observers_end__
+                0x000000000002d0dc                __stop_sdh_soc_observers = __sdh_soc_observers_end__
+                0x000000000002d0dc                __sdh_soc_observers_load_end__ = __sdh_soc_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_soc_observers_start__ == __sdh_soc_observers_end__) || ((__sdh_soc_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_soc_observers is too large to fit in FLASH memory segment)
-                0x000000000002d068                __pwr_mgmt_data_load_start__ = ALIGN (__sdh_soc_observers_end__, 0x4)
+                0x000000000002d0dc                __pwr_mgmt_data_load_start__ = ALIGN (__sdh_soc_observers_end__, 0x4)
 
-.pwr_mgmt_data  0x000000000002d068        0x0
-                0x000000000002d068                __pwr_mgmt_data_start__ = .
-                0x000000000002d068                __start_pwr_mgmt_data = __pwr_mgmt_data_start__
+.pwr_mgmt_data  0x000000000002d0dc        0x0
+                0x000000000002d0dc                __pwr_mgmt_data_start__ = .
+                0x000000000002d0dc                __start_pwr_mgmt_data = __pwr_mgmt_data_start__
  *(SORT_BY_NAME(.pwr_mgmt_data*))
-                0x000000000002d068                __pwr_mgmt_data_end__ = (__pwr_mgmt_data_start__ + SIZEOF (.pwr_mgmt_data))
+                0x000000000002d0dc                __pwr_mgmt_data_end__ = (__pwr_mgmt_data_start__ + SIZEOF (.pwr_mgmt_data))
                 0x0000000000000000                __pwr_mgmt_data_size__ = SIZEOF (.pwr_mgmt_data)
-                0x000000000002d068                __stop_pwr_mgmt_data = __pwr_mgmt_data_end__
-                0x000000000002d068                __pwr_mgmt_data_load_end__ = __pwr_mgmt_data_end__
+                0x000000000002d0dc                __stop_pwr_mgmt_data = __pwr_mgmt_data_end__
+                0x000000000002d0dc                __pwr_mgmt_data_load_end__ = __pwr_mgmt_data_end__
                 0x0000000000000001                . = ASSERT (((__pwr_mgmt_data_start__ == __pwr_mgmt_data_end__) || ((__pwr_mgmt_data_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .pwr_mgmt_data is too large to fit in FLASH memory segment)
-                0x000000000002d068                __sdh_ble_observers_load_start__ = ALIGN (__pwr_mgmt_data_end__, 0x4)
+                0x000000000002d0dc                __sdh_ble_observers_load_start__ = ALIGN (__pwr_mgmt_data_end__, 0x4)
 
 .sdh_ble_observers
-                0x000000000002d068       0x48
-                0x000000000002d068                __sdh_ble_observers_start__ = .
-                0x000000000002d068                __start_sdh_ble_observers = __sdh_ble_observers_start__
+                0x000000000002d0dc       0x48
+                0x000000000002d0dc                __sdh_ble_observers_start__ = .
+                0x000000000002d0dc                __start_sdh_ble_observers = __sdh_ble_observers_start__
  *(SORT_BY_NAME(.sdh_ble_observers*))
  .sdh_ble_observers0
-                0x000000000002d068        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+                0x000000000002d0dc        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
  .sdh_ble_observers1
-                0x000000000002d070        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
+                0x000000000002d0e4        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
  .sdh_ble_observers1
-                0x000000000002d078       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+                0x000000000002d0ec       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
  .sdh_ble_observers1
-                0x000000000002d088        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+                0x000000000002d0fc        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
  .sdh_ble_observers1
-                0x000000000002d090        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+                0x000000000002d104        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
  .sdh_ble_observers2
-                0x000000000002d098        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+                0x000000000002d10c        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
  .sdh_ble_observers3
-                0x000000000002d0a0       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
-                0x000000000002d0b0                __sdh_ble_observers_end__ = (__sdh_ble_observers_start__ + SIZEOF (.sdh_ble_observers))
+                0x000000000002d114       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+                0x000000000002d124                __sdh_ble_observers_end__ = (__sdh_ble_observers_start__ + SIZEOF (.sdh_ble_observers))
                 0x0000000000000048                __sdh_ble_observers_size__ = SIZEOF (.sdh_ble_observers)
-                0x000000000002d0b0                __stop_sdh_ble_observers = __sdh_ble_observers_end__
-                0x000000000002d0b0                __sdh_ble_observers_load_end__ = __sdh_ble_observers_end__
+                0x000000000002d124                __stop_sdh_ble_observers = __sdh_ble_observers_end__
+                0x000000000002d124                __sdh_ble_observers_load_end__ = __sdh_ble_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_ble_observers_start__ == __sdh_ble_observers_end__) || ((__sdh_ble_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_ble_observers is too large to fit in FLASH memory segment)
-                0x000000000002d0b0                __log_const_data_load_start__ = ALIGN (__sdh_ble_observers_end__, 0x4)
+                0x000000000002d124                __log_const_data_load_start__ = ALIGN (__sdh_ble_observers_end__, 0x4)
 
 .log_const_data
-                0x000000000002d0b0        0x0
-                0x000000000002d0b0                __log_const_data_start__ = .
-                0x000000000002d0b0                __start_log_const_data = __log_const_data_start__
+                0x000000000002d124        0x0
+                0x000000000002d124                __log_const_data_start__ = .
+                0x000000000002d124                __start_log_const_data = __log_const_data_start__
  *(SORT_BY_NAME(.log_const_data*))
-                0x000000000002d0b0                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
+                0x000000000002d124                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
                 0x0000000000000000                __log_const_data_size__ = SIZEOF (.log_const_data)
-                0x000000000002d0b0                __stop_log_const_data = __log_const_data_end__
-                0x000000000002d0b0                __log_const_data_load_end__ = __log_const_data_end__
+                0x000000000002d124                __stop_log_const_data = __log_const_data_end__
+                0x000000000002d124                __log_const_data_load_end__ = __log_const_data_end__
                 0x0000000000000001                . = ASSERT (((__log_const_data_start__ == __log_const_data_end__) || ((__log_const_data_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .log_const_data is too large to fit in FLASH memory segment)
-                0x000000000002d0b0                __nrf_balloc_load_start__ = ALIGN (__log_const_data_end__, 0x4)
+                0x000000000002d124                __nrf_balloc_load_start__ = ALIGN (__log_const_data_end__, 0x4)
 
-.nrf_balloc     0x000000000002d0b0        0x0
-                0x000000000002d0b0                __nrf_balloc_start__ = .
-                0x000000000002d0b0                __start_nrf_balloc = __nrf_balloc_start__
+.nrf_balloc     0x000000000002d124        0x0
+                0x000000000002d124                __nrf_balloc_start__ = .
+                0x000000000002d124                __start_nrf_balloc = __nrf_balloc_start__
  *(.nrf_balloc*)
-                0x000000000002d0b0                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
+                0x000000000002d124                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
                 0x0000000000000000                __nrf_balloc_size__ = SIZEOF (.nrf_balloc)
-                0x000000000002d0b0                __stop_nrf_balloc = __nrf_balloc_end__
-                0x000000000002d0b0                __nrf_balloc_load_end__ = __nrf_balloc_end__
+                0x000000000002d124                __stop_nrf_balloc = __nrf_balloc_end__
+                0x000000000002d124                __nrf_balloc_load_end__ = __nrf_balloc_end__
                 0x0000000000000001                . = ASSERT (((__nrf_balloc_start__ == __nrf_balloc_end__) || ((__nrf_balloc_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .nrf_balloc is too large to fit in FLASH memory segment)
-                0x000000000002d0b0                __sdh_state_observers_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
+                0x000000000002d124                __sdh_state_observers_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
 
 .sdh_state_observers
-                0x000000000002d0b0       0x10
-                0x000000000002d0b0                __sdh_state_observers_start__ = .
-                0x000000000002d0b0                __start_sdh_state_observers = __sdh_state_observers_start__
+                0x000000000002d124       0x10
+                0x000000000002d124                __sdh_state_observers_start__ = .
+                0x000000000002d124                __start_sdh_state_observers = __sdh_state_observers_start__
  *(SORT_BY_NAME(.sdh_state_observers*))
  .sdh_state_observers0
-                0x000000000002d0b0        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
+                0x000000000002d124        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
  .sdh_state_observers0
-                0x000000000002d0b8        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_drv_clock.o
-                0x000000000002d0c0                __sdh_state_observers_end__ = (__sdh_state_observers_start__ + SIZEOF (.sdh_state_observers))
+                0x000000000002d12c        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_drv_clock.o
+                0x000000000002d134                __sdh_state_observers_end__ = (__sdh_state_observers_start__ + SIZEOF (.sdh_state_observers))
                 0x0000000000000010                __sdh_state_observers_size__ = SIZEOF (.sdh_state_observers)
-                0x000000000002d0c0                __stop_sdh_state_observers = __sdh_state_observers_end__
-                0x000000000002d0c0                __sdh_state_observers_load_end__ = __sdh_state_observers_end__
+                0x000000000002d134                __stop_sdh_state_observers = __sdh_state_observers_end__
+                0x000000000002d134                __sdh_state_observers_load_end__ = __sdh_state_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_state_observers_start__ == __sdh_state_observers_end__) || ((__sdh_state_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_state_observers is too large to fit in FLASH memory segment)
-                0x000000000002d0c0                __sdh_stack_observers_load_start__ = ALIGN (__sdh_state_observers_end__, 0x4)
+                0x000000000002d134                __sdh_stack_observers_load_start__ = ALIGN (__sdh_state_observers_end__, 0x4)
 
 .sdh_stack_observers
-                0x000000000002d0c0       0x10
-                0x000000000002d0c0                __sdh_stack_observers_start__ = .
-                0x000000000002d0c0                __start_sdh_stack_observers = __sdh_stack_observers_start__
+                0x000000000002d134       0x10
+                0x000000000002d134                __sdh_stack_observers_start__ = .
+                0x000000000002d134                __start_sdh_stack_observers = __sdh_stack_observers_start__
  *(SORT_BY_NAME(.sdh_stack_observers*))
  .sdh_stack_observers0
-                0x000000000002d0c0        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002d134        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .sdh_stack_observers0
-                0x000000000002d0c8        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
-                0x000000000002d0d0                __sdh_stack_observers_end__ = (__sdh_stack_observers_start__ + SIZEOF (.sdh_stack_observers))
+                0x000000000002d13c        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+                0x000000000002d144                __sdh_stack_observers_end__ = (__sdh_stack_observers_start__ + SIZEOF (.sdh_stack_observers))
                 0x0000000000000010                __sdh_stack_observers_size__ = SIZEOF (.sdh_stack_observers)
-                0x000000000002d0d0                __stop_sdh_stack_observers = __sdh_stack_observers_end__
-                0x000000000002d0d0                __sdh_stack_observers_load_end__ = __sdh_stack_observers_end__
+                0x000000000002d144                __stop_sdh_stack_observers = __sdh_stack_observers_end__
+                0x000000000002d144                __sdh_stack_observers_load_end__ = __sdh_stack_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_stack_observers_start__ == __sdh_stack_observers_end__) || ((__sdh_stack_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_stack_observers is too large to fit in FLASH memory segment)
-                0x000000000002d0d0                __sdh_req_observers_load_start__ = ALIGN (__sdh_stack_observers_end__, 0x4)
+                0x000000000002d144                __sdh_req_observers_load_start__ = ALIGN (__sdh_stack_observers_end__, 0x4)
 
 .sdh_req_observers
-                0x000000000002d0d0        0x8
-                0x000000000002d0d0                __sdh_req_observers_start__ = .
-                0x000000000002d0d0                __start_sdh_req_observers = __sdh_req_observers_start__
+                0x000000000002d144        0x8
+                0x000000000002d144                __sdh_req_observers_start__ = .
+                0x000000000002d144                __start_sdh_req_observers = __sdh_req_observers_start__
  *(SORT_BY_NAME(.sdh_req_observers*))
  .sdh_req_observers0
-                0x000000000002d0d0        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
-                0x000000000002d0d0                m_req_obs
-                0x000000000002d0d8                __sdh_req_observers_end__ = (__sdh_req_observers_start__ + SIZEOF (.sdh_req_observers))
+                0x000000000002d144        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
+                0x000000000002d144                m_req_obs
+                0x000000000002d14c                __sdh_req_observers_end__ = (__sdh_req_observers_start__ + SIZEOF (.sdh_req_observers))
                 0x0000000000000008                __sdh_req_observers_size__ = SIZEOF (.sdh_req_observers)
-                0x000000000002d0d8                __stop_sdh_req_observers = __sdh_req_observers_end__
-                0x000000000002d0d8                __sdh_req_observers_load_end__ = __sdh_req_observers_end__
+                0x000000000002d14c                __stop_sdh_req_observers = __sdh_req_observers_end__
+                0x000000000002d14c                __sdh_req_observers_load_end__ = __sdh_req_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_req_observers_start__ == __sdh_req_observers_end__) || ((__sdh_req_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_req_observers is too large to fit in FLASH memory segment)
-                0x000000000002d0d8                __nrf_queue_load_start__ = ALIGN (__sdh_req_observers_end__, 0x4)
+                0x000000000002d14c                __nrf_queue_load_start__ = ALIGN (__sdh_req_observers_end__, 0x4)
 
-.nrf_queue      0x000000000002d0d8        0x0
-                0x000000000002d0d8                __nrf_queue_start__ = .
-                0x000000000002d0d8                __start_nrf_queue = __nrf_queue_start__
+.nrf_queue      0x000000000002d14c        0x0
+                0x000000000002d14c                __nrf_queue_start__ = .
+                0x000000000002d14c                __start_nrf_queue = __nrf_queue_start__
  *(.nrf_queue*)
-                0x000000000002d0d8                __nrf_queue_end__ = (__nrf_queue_start__ + SIZEOF (.nrf_queue))
+                0x000000000002d14c                __nrf_queue_end__ = (__nrf_queue_start__ + SIZEOF (.nrf_queue))
                 0x0000000000000000                __nrf_queue_size__ = SIZEOF (.nrf_queue)
-                0x000000000002d0d8                __stop_nrf_queue = __nrf_queue_end__
-                0x000000000002d0d8                __nrf_queue_load_end__ = __nrf_queue_end__
+                0x000000000002d14c                __stop_nrf_queue = __nrf_queue_end__
+                0x000000000002d14c                __nrf_queue_load_end__ = __nrf_queue_end__
                 0x0000000000000001                . = ASSERT (((__nrf_queue_start__ == __nrf_queue_end__) || ((__nrf_queue_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .nrf_queue is too large to fit in FLASH memory segment)
-                0x000000000002d0d8                __cli_command_load_start__ = ALIGN (__nrf_queue_end__, 0x4)
+                0x000000000002d14c                __cli_command_load_start__ = ALIGN (__nrf_queue_end__, 0x4)
 
-.cli_command    0x000000000002d0d8        0x0
-                0x000000000002d0d8                __cli_command_start__ = .
-                0x000000000002d0d8                __start_cli_command = __cli_command_start__
+.cli_command    0x000000000002d14c        0x0
+                0x000000000002d14c                __cli_command_start__ = .
+                0x000000000002d14c                __start_cli_command = __cli_command_start__
  *(.cli_command*)
-                0x000000000002d0d8                __cli_command_end__ = (__cli_command_start__ + SIZEOF (.cli_command))
+                0x000000000002d14c                __cli_command_end__ = (__cli_command_start__ + SIZEOF (.cli_command))
                 0x0000000000000000                __cli_command_size__ = SIZEOF (.cli_command)
-                0x000000000002d0d8                __stop_cli_command = __cli_command_end__
-                0x000000000002d0d8                __cli_command_load_end__ = __cli_command_end__
+                0x000000000002d14c                __stop_cli_command = __cli_command_end__
+                0x000000000002d14c                __cli_command_load_end__ = __cli_command_end__
                 0x0000000000000001                . = ASSERT (((__cli_command_start__ == __cli_command_end__) || ((__cli_command_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .cli_command is too large to fit in FLASH memory segment)
-                0x000000000002d0d8                __crypto_data_load_start__ = ALIGN (__cli_command_end__, 0x4)
+                0x000000000002d14c                __crypto_data_load_start__ = ALIGN (__cli_command_end__, 0x4)
 
-.crypto_data    0x000000000002d0d8        0x0
-                0x000000000002d0d8                __crypto_data_start__ = .
-                0x000000000002d0d8                __start_crypto_data = __crypto_data_start__
+.crypto_data    0x000000000002d14c        0x0
+                0x000000000002d14c                __crypto_data_start__ = .
+                0x000000000002d14c                __start_crypto_data = __crypto_data_start__
  *(SORT_BY_NAME(.crypto_data*))
-                0x000000000002d0d8                __crypto_data_end__ = (__crypto_data_start__ + SIZEOF (.crypto_data))
+                0x000000000002d14c                __crypto_data_end__ = (__crypto_data_start__ + SIZEOF (.crypto_data))
                 0x0000000000000000                __crypto_data_size__ = SIZEOF (.crypto_data)
-                0x000000000002d0d8                __stop_crypto_data = __crypto_data_end__
-                0x000000000002d0d8                __crypto_data_load_end__ = __crypto_data_end__
+                0x000000000002d14c                __stop_crypto_data = __crypto_data_end__
+                0x000000000002d14c                __crypto_data_load_end__ = __crypto_data_end__
                 0x0000000000000001                . = ASSERT (((__crypto_data_start__ == __crypto_data_end__) || ((__crypto_data_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .crypto_data is too large to fit in FLASH memory segment)
-                0x000000000002d0d8                __nrf_sections_load_start__ = ALIGN (__crypto_data_end__, 0x4)
+                0x000000000002d14c                __nrf_sections_load_start__ = ALIGN (__crypto_data_end__, 0x4)
 
-.nrf_sections   0x000000000002d0d8        0x0
-                0x000000000002d0d8                __nrf_sections_start__ = .
-                0x000000000002d0d8                __start_nrf_sections = __nrf_sections_start__
+.nrf_sections   0x000000000002d14c        0x0
+                0x000000000002d14c                __nrf_sections_start__ = .
+                0x000000000002d14c                __start_nrf_sections = __nrf_sections_start__
  *(.nrf_sections .nrf_sections.*)
-                0x000000000002d0d8                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
+                0x000000000002d14c                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
                 0x0000000000000000                __nrf_sections_size__ = SIZEOF (.nrf_sections)
-                0x000000000002d0d8                __nrf_sections_load_end__ = __nrf_sections_end__
+                0x000000000002d14c                __nrf_sections_load_end__ = __nrf_sections_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_start__ == __nrf_sections_end__) || ((__nrf_sections_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .nrf_sections is too large to fit in FLASH memory segment)
-                0x000000000002d0d8                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
+                0x000000000002d14c                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
 
 .log_dynamic_data
-                0x0000000020002220        0x0 load address 0x000000000002d0d8
+                0x0000000020002220        0x0 load address 0x000000000002d14c
                 0x0000000020002220                __log_dynamic_data_start__ = .
  *(SORT_BY_NAME(.log_dynamic_data*))
                 0x0000000020002220                __log_dynamic_data_end__ = (__log_dynamic_data_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000000                __log_dynamic_data_size__ = SIZEOF (.log_dynamic_data)
-                0x000000000002d0d8                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
+                0x000000000002d14c                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_load_start__ == __log_dynamic_data_load_end__) || ((__log_dynamic_data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .log_dynamic_data is too large to fit in FLASH memory segment)
 
 .log_dynamic_data_run
@@ -14477,19 +14477,19 @@ Linker script and memory map
                 0x0000000020002220                __stop_log_dynamic_data = __log_dynamic_data_run_end__
                 0x0000000020002220                __log_dynamic_data_run_load_end__ = __log_dynamic_data_run_end__
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_run_start__ == __log_dynamic_data_run_end__) || ((__log_dynamic_data_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .log_dynamic_data_run is too large to fit in RAM memory segment)
-                0x000000000002d0d8                __fs_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
+                0x000000000002d14c                __fs_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
 
-.fs_data        0x0000000020002220       0x14 load address 0x000000000002d0d8
+.fs_data        0x0000000020002220       0x14 load address 0x000000000002d14c
                 0x0000000020002220                __fs_data_start__ = .
  *(.fs_data*)
  .fs_data       0x0000000020002220       0x14 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
                 0x0000000020002220                m_fs
                 0x0000000020002234                __fs_data_end__ = (__fs_data_start__ + SIZEOF (.fs_data))
                 0x0000000000000014                __fs_data_size__ = SIZEOF (.fs_data)
-                0x000000000002d0ec                __fs_data_load_end__ = (__fs_data_load_start__ + SIZEOF (.fs_data))
+                0x000000000002d160                __fs_data_load_end__ = (__fs_data_load_start__ + SIZEOF (.fs_data))
                 0x0000000000000001                . = ASSERT (((__fs_data_load_start__ == __fs_data_load_end__) || ((__fs_data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .fs_data is too large to fit in FLASH memory segment)
 
-.fs_data_run    0x0000000020002220       0x14 load address 0x000000000002d0d8
+.fs_data_run    0x0000000020002220       0x14 load address 0x000000000002d14c
                 0x0000000020002220                __fs_data_run_start__ = .
                 0x0000000020002220                __start_fs_data = __fs_data_run_start__
                 0x0000000020002234                . = MAX ((__fs_data_run_start__ + SIZEOF (.fs_data)), .)
@@ -14499,15 +14499,15 @@ Linker script and memory map
                 0x0000000020002234                __stop_fs_data = __fs_data_run_end__
                 0x0000000020002234                __fs_data_run_load_end__ = __fs_data_run_end__
                 0x0000000000000001                . = ASSERT (((__fs_data_run_start__ == __fs_data_run_end__) || ((__fs_data_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .fs_data_run is too large to fit in RAM memory segment)
-                0x000000000002d0ec                __cli_sorted_cmd_ptrs_load_start__ = ALIGN ((__fs_data_load_start__ + SIZEOF (.fs_data)), 0x4)
+                0x000000000002d160                __cli_sorted_cmd_ptrs_load_start__ = ALIGN ((__fs_data_load_start__ + SIZEOF (.fs_data)), 0x4)
 
 .cli_sorted_cmd_ptrs
-                0x0000000020002234        0x0 load address 0x000000000002d0ec
+                0x0000000020002234        0x0 load address 0x000000000002d160
                 0x0000000020002234                __cli_sorted_cmd_ptrs_start__ = .
  *(.cli_sorted_cmd_ptrs*)
                 0x0000000020002234                __cli_sorted_cmd_ptrs_end__ = (__cli_sorted_cmd_ptrs_start__ + SIZEOF (.cli_sorted_cmd_ptrs))
                 0x0000000000000000                __cli_sorted_cmd_ptrs_size__ = SIZEOF (.cli_sorted_cmd_ptrs)
-                0x000000000002d0ec                __cli_sorted_cmd_ptrs_load_end__ = (__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs))
+                0x000000000002d160                __cli_sorted_cmd_ptrs_load_end__ = (__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs))
                 0x0000000000000001                . = ASSERT (((__cli_sorted_cmd_ptrs_load_start__ == __cli_sorted_cmd_ptrs_load_end__) || ((__cli_sorted_cmd_ptrs_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .cli_sorted_cmd_ptrs is too large to fit in FLASH memory segment)
 
 .cli_sorted_cmd_ptrs_run
@@ -14531,116 +14531,117 @@ Linker script and memory map
                 0x0000000000000000                __nrf_sections_run_end_size__ = SIZEOF (.nrf_sections_run_end)
                 0x0000000020002234                __nrf_sections_run_end_load_end__ = __nrf_sections_run_end_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_run_end_start__ == __nrf_sections_run_end_end__) || ((__nrf_sections_run_end_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .nrf_sections_run_end is too large to fit in RAM memory segment)
-                0x000000000002d0ec                __dtors_load_start__ = ALIGN ((__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs)), 0x4)
+                0x000000000002d160                __dtors_load_start__ = ALIGN ((__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs)), 0x4)
 
-.dtors          0x000000000002d0ec        0x0
-                0x000000000002d0ec                __dtors_start__ = .
+.dtors          0x000000000002d160        0x0
+                0x000000000002d160                __dtors_start__ = .
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x000000000002d0ec                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x000000000002d160                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x000000000002d0ec                __dtors_load_end__ = __dtors_end__
+                0x000000000002d160                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .dtors is too large to fit in FLASH memory segment)
-                0x000000000002d0ec                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x000000000002d160                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x000000000002d0ec        0x0
-                0x000000000002d0ec                __ctors_start__ = .
+.ctors          0x000000000002d160        0x0
+                0x000000000002d160                __ctors_start__ = .
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT_BY_NAME(.init_array.*))
-                0x000000000002d0ec                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x000000000002d160                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x000000000002d0ec                __ctors_load_end__ = __ctors_end__
+                0x000000000002d160                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .ctors is too large to fit in FLASH memory segment)
-                0x000000000002d0ec                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x000000000002d160                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x000000000002d0ec      0x118
-                0x000000000002d0ec                __rodata_start__ = .
+.rodata         0x000000000002d160      0x124
+                0x000000000002d160                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.m_detection_delay_timer_id
-                0x000000000002d0ec        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
+                0x000000000002d160        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
+ *fill*         0x000000000002d164        0xc 
  .rodata.delay_bytecode.8325
-                0x000000000002d0f0        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_timer.o
- *fill*         0x000000000002d0f6        0x2 
+                0x000000000002d170        0x6 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_timer.o
+ *fill*         0x000000000002d176        0x2 
  .rodata.dirty_header.8767
-                0x000000000002d0f8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
+                0x000000000002d178        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
  .rodata.page_tag_data.8640
-                0x000000000002d0fc        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
+                0x000000000002d17c        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
  .rodata.page_tag_swap.8636
-                0x000000000002d104        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
+                0x000000000002d184        0x8 Output/nrf52-ble-tutorial-characteristic Release/Obj/fds.o
  .rodata.m_flash_info
-                0x000000000002d10c        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
+                0x000000000002d18c        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
  .rodata.nrf_fstorage_sd
-                0x000000000002d118       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
-                0x000000000002d118                nrf_fstorage_sd
+                0x000000000002d198       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_fstorage_sd.o
+                0x000000000002d198                nrf_fstorage_sd
  .rodata.pwr_mgmt_data
-                0x000000000002d138        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_pwr_mgmt.o
+                0x000000000002d1b8        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_pwr_mgmt.o
  .rodata.m_board_btn_list
-                0x000000000002d144        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/boards.o
+                0x000000000002d1c4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/boards.o
  .rodata.m_board_led_list
-                0x000000000002d148        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/boards.o
+                0x000000000002d1c8        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/boards.o
  .rodata.app_buttons
-                0x000000000002d14c       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
+                0x000000000002d1cc       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .rodata.m_bsp_alert_tmr
-                0x000000000002d16c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
+                0x000000000002d1ec        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .rodata.m_bsp_button_tmr
-                0x000000000002d170        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
+                0x000000000002d1f0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .rodata.m_bsp_leds_tmr
-                0x000000000002d174        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
+                0x000000000002d1f4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .rodata.main.str1.1
-                0x000000000002d178       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- *fill*         0x000000000002d18a        0x2 
+                0x000000000002d1f8       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ *fill*         0x000000000002d20a        0x2 
  .rodata.m_our_char_timer_id
-                0x000000000002d18c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .rodata        0x000000000002d190       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .rodata        0x000000000002d1a0       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002d20c        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .rodata        0x000000000002d210       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .rodata        0x000000000002d220       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .rodata.service_changed_pending.9662
-                0x000000000002d1b0        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002d230        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .rodata.service_changed_pending.9718
-                0x000000000002d1b4        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+                0x000000000002d234        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
  .rodata.CSWTCH.24
-                0x000000000002d1b8        0xa Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .rodata        0x000000000002d1c2        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- *fill*         0x000000000002d1c6        0x2 
+                0x000000000002d238        0xa Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .rodata        0x000000000002d242        0x4 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ *fill*         0x000000000002d246        0x2 
  .rodata.sdh_req_observers
-                0x000000000002d1c8        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002d248        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .rodata.sdh_stack_observers
-                0x000000000002d1d4        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002d254        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .rodata.sdh_state_observers
-                0x000000000002d1e0        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+                0x000000000002d260        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
  .rodata.sdh_ble_observers
-                0x000000000002d1ec        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+                0x000000000002d26c        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .rodata.sdh_soc_observers
-                0x000000000002d1f8        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
-                0x000000000002d204                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
-                0x0000000000000118                __rodata_size__ = SIZEOF (.rodata)
-                0x000000000002d204                __rodata_load_end__ = __rodata_end__
+                0x000000000002d278        0xc Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+                0x000000000002d284                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
+                0x0000000000000124                __rodata_size__ = SIZEOF (.rodata)
+                0x000000000002d284                __rodata_load_end__ = __rodata_end__
 
-.rel.dyn        0x000000000002d204        0x0
- .rel.iplt      0x000000000002d204        0x0 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
+.rel.dyn        0x000000000002d284        0x0
+ .rel.iplt      0x000000000002d284        0x0 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__rodata_start__ == __rodata_end__) || ((__rodata_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .rodata is too large to fit in FLASH memory segment)
-                0x000000000002d204                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
+                0x000000000002d284                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
 
-.ARM.exidx      0x000000000002d204        0x0
-                0x000000000002d204                __ARM.exidx_start__ = .
-                0x000000000002d204                __exidx_start = __ARM.exidx_start__
+.ARM.exidx      0x000000000002d284        0x0
+                0x000000000002d284                __ARM.exidx_start__ = .
+                0x000000000002d284                __exidx_start = __ARM.exidx_start__
  *(.ARM.exidx .ARM.exidx.*)
-                0x000000000002d204                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
+                0x000000000002d284                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
                 0x0000000000000000                __ARM.exidx_size__ = SIZEOF (.ARM.exidx)
-                0x000000000002d204                __exidx_end = __ARM.exidx_end__
-                0x000000000002d204                __ARM.exidx_load_end__ = __ARM.exidx_end__
+                0x000000000002d284                __exidx_end = __ARM.exidx_end__
+                0x000000000002d284                __ARM.exidx_load_end__ = __ARM.exidx_end__
                 0x0000000000000001                . = ASSERT (((__ARM.exidx_start__ == __ARM.exidx_end__) || ((__ARM.exidx_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .ARM.exidx is too large to fit in FLASH memory segment)
-                0x000000000002d204                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
+                0x000000000002d284                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
 
-.fast           0x0000000020002234        0x0 load address 0x000000000002d204
+.fast           0x0000000020002234        0x0 load address 0x000000000002d284
                 0x0000000020002234                __fast_start__ = .
  *(.fast .fast.*)
                 0x0000000020002234                __fast_end__ = (__fast_start__ + SIZEOF (.fast))
                 0x0000000000000000                __fast_size__ = SIZEOF (.fast)
-                0x000000000002d204                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
+                0x000000000002d284                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
                 0x0000000000000001                . = ASSERT (((__fast_load_start__ == __fast_load_end__) || ((__fast_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .fast is too large to fit in FLASH memory segment)
 
 .fast_run       0x0000000020002234        0x0
@@ -14650,9 +14651,9 @@ Linker script and memory map
                 0x0000000000000000                __fast_run_size__ = SIZEOF (.fast_run)
                 0x0000000020002234                __fast_run_load_end__ = __fast_run_end__
                 0x0000000000000001                . = ASSERT (((__fast_run_start__ == __fast_run_end__) || ((__fast_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .fast_run is too large to fit in RAM memory segment)
-                0x000000000002d204                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
+                0x000000000002d284                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
 
-.data           0x0000000020002234       0x15 load address 0x000000000002d204
+.data           0x0000000020002234       0x15 load address 0x000000000002d284
                 0x0000000020002234                __data_start__ = .
  *(.data .data.* .gnu.linkonce.d.*)
  .data.SystemCoreClock
@@ -14686,13 +14687,13 @@ Linker script and memory map
                 0x0000000020002248        0x1 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
                 0x0000000020002249                __data_end__ = (__data_start__ + SIZEOF (.data))
                 0x0000000000000015                __data_size__ = SIZEOF (.data)
-                0x000000000002d219                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
+                0x000000000002d299                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
 
 .igot.plt       0x0000000100000000        0x0
  .igot.plt      0x0000000100000000        0x0 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__data_load_start__ == __data_load_end__) || ((__data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .data is too large to fit in FLASH memory segment)
 
-.data_run       0x0000000020002234       0x15 load address 0x000000000002d204
+.data_run       0x0000000020002234       0x15 load address 0x000000000002d284
                 0x0000000020002234                __data_run_start__ = .
                 0x0000000020002249                . = MAX ((__data_run_start__ + SIZEOF (.data)), .)
  *fill*         0x0000000020002234       0x15 
@@ -14700,16 +14701,16 @@ Linker script and memory map
                 0x0000000000000015                __data_run_size__ = SIZEOF (.data_run)
                 0x0000000020002249                __data_run_load_end__ = __data_run_end__
                 0x0000000000000001                . = ASSERT (((__data_run_start__ == __data_run_end__) || ((__data_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .data_run is too large to fit in RAM memory segment)
-                0x000000000002d21c                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
+                0x000000000002d29c                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
 
-.tdata          0x000000002000224c        0x0 load address 0x000000000002d21c
+.tdata          0x000000002000224c        0x0 load address 0x000000000002d29c
                 0x000000002000224c                __tdata_start__ = .
  *(.tdata .tdata.*)
                 0x000000002000224c                __tdata_end__ = (__tdata_start__ + SIZEOF (.tdata))
                 0x0000000000000000                __tdata_size__ = SIZEOF (.tdata)
-                0x000000000002d21c                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
-                0x000000000002d21c                __FLASH_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
-                0x000000000002d21c                __FLASH_segment_used_size__ = (__FLASH_segment_used_end__ - __FLASH_segment_start__)
+                0x000000000002d29c                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
+                0x000000000002d29c                __FLASH_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
+                0x000000000002d29c                __FLASH_segment_used_size__ = (__FLASH_segment_used_end__ - __FLASH_segment_start__)
                 0x0000000000000001                . = ASSERT (((__tdata_load_start__ == __tdata_load_end__) || ((__tdata_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .tdata is too large to fit in FLASH memory segment)
 
 .tdata_run      0x000000002000224c        0x0
@@ -15223,7 +15224,7 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .comment       0x0000000000000047       0x48 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
  .comment       0x0000000000000047       0x48 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
 
-.debug_line     0x0000000000000000    0x1d96c
+.debug_line     0x0000000000000000    0x1d9cd
  .debug_line    0x0000000000000000      0x1ed Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
  .debug_line    0x00000000000001ed      0x8f9 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
  .debug_line    0x0000000000000ae6      0x36e Output/nrf52-ble-tutorial-characteristic Release/Obj/app_error.o
@@ -15249,30 +15250,30 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_line    0x000000000000cb6a      0xca3 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .debug_line    0x000000000000d80d      0x878 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
  .debug_line    0x000000000000e085     0x1358 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_line    0x000000000000f3dd      0x870 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_line    0x000000000000fc4d      0xec8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
- .debug_line    0x0000000000010b15      0xd84 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
- .debug_line    0x0000000000011899      0xa0f Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
- .debug_line    0x00000000000122a8      0xb50 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
- .debug_line    0x0000000000012df8      0x669 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
- .debug_line    0x0000000000013461      0x9ea Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_line    0x0000000000013e4b      0x83a Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
- .debug_line    0x0000000000014685     0x10b5 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
- .debug_line    0x000000000001573a      0xa1a Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
- .debug_line    0x0000000000016154      0x624 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
- .debug_line    0x0000000000016778      0xc98 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_line    0x0000000000017410      0xe55 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_line    0x0000000000018265      0x6ff Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
- .debug_line    0x0000000000018964     0x151f Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
- .debug_line    0x0000000000019e83      0x49b Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
- .debug_line    0x000000000001a31e      0x55d Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
- .debug_line    0x000000000001a87b      0xe54 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
- .debug_line    0x000000000001b6cf      0xb54 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- .debug_line    0x000000000001c223      0xa7f Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- .debug_line    0x000000000001cca2      0x77b Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
- .debug_line    0x000000000001d41d      0x54f Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+ .debug_line    0x000000000000f3dd      0x8d1 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_line    0x000000000000fcae      0xec8 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+ .debug_line    0x0000000000010b76      0xd84 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+ .debug_line    0x00000000000118fa      0xa0f Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_line    0x0000000000012309      0xb50 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+ .debug_line    0x0000000000012e59      0x669 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+ .debug_line    0x00000000000134c2      0x9ea Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_line    0x0000000000013eac      0x83a Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+ .debug_line    0x00000000000146e6     0x10b5 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_line    0x000000000001579b      0xa1a Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_line    0x00000000000161b5      0x624 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_line    0x00000000000167d9      0xc98 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_line    0x0000000000017471      0xe55 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_line    0x00000000000182c6      0x6ff Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+ .debug_line    0x00000000000189c5     0x151f Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+ .debug_line    0x0000000000019ee4      0x49b Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+ .debug_line    0x000000000001a37f      0x55d Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+ .debug_line    0x000000000001a8dc      0xe54 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+ .debug_line    0x000000000001b730      0xb54 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ .debug_line    0x000000000001c284      0xa7f Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_line    0x000000000001cd03      0x77b Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+ .debug_line    0x000000000001d47e      0x54f Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
-.debug_info     0x0000000000000000    0x27c1b
+.debug_info     0x0000000000000000    0x27d78
  .debug_info    0x0000000000000000       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
  .debug_info    0x0000000000000022      0x7f5 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
  .debug_info    0x0000000000000817      0x45e Output/nrf52-ble-tutorial-characteristic Release/Obj/app_error.o
@@ -15298,28 +15299,28 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_info    0x000000000000fdb5     0x1038 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .debug_info    0x0000000000010ded      0x690 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
  .debug_info    0x000000000001147d     0x1bf7 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_info    0x0000000000013074      0x91d Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_info    0x0000000000013991     0x1896 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
- .debug_info    0x0000000000015227     0x10d2 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
- .debug_info    0x00000000000162f9      0xecb Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
- .debug_info    0x00000000000171c4      0xf8b Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
- .debug_info    0x000000000001814f      0x93a Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
- .debug_info    0x0000000000018a89     0x102b Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_info    0x0000000000019ab4      0xa73 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
- .debug_info    0x000000000001a527     0x1be9 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
- .debug_info    0x000000000001c110      0xc3a Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
- .debug_info    0x000000000001cd4a      0x6ff Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
- .debug_info    0x000000000001d449     0x13a4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_info    0x000000000001e7ed     0x14fb Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_info    0x000000000001fce8      0x8c8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
- .debug_info    0x00000000000205b0     0x1d6a Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
- .debug_info    0x000000000002231a      0x54e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
- .debug_info    0x0000000000022868      0x693 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
- .debug_info    0x0000000000022efb     0x1df5 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
- .debug_info    0x0000000000024cf0     0x11d5 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- .debug_info    0x0000000000025ec5      0xf09 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- .debug_info    0x0000000000026dce      0x939 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
- .debug_info    0x0000000000027707      0x514 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+ .debug_info    0x0000000000013074      0xa7a Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_info    0x0000000000013aee     0x1896 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+ .debug_info    0x0000000000015384     0x10d2 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+ .debug_info    0x0000000000016456      0xecb Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_info    0x0000000000017321      0xf8b Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+ .debug_info    0x00000000000182ac      0x93a Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+ .debug_info    0x0000000000018be6     0x102b Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_info    0x0000000000019c11      0xa73 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+ .debug_info    0x000000000001a684     0x1be9 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_info    0x000000000001c26d      0xc3a Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_info    0x000000000001cea7      0x6ff Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_info    0x000000000001d5a6     0x13a4 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_info    0x000000000001e94a     0x14fb Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_info    0x000000000001fe45      0x8c8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+ .debug_info    0x000000000002070d     0x1d6a Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+ .debug_info    0x0000000000022477      0x54e Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+ .debug_info    0x00000000000229c5      0x693 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+ .debug_info    0x0000000000023058     0x1df5 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+ .debug_info    0x0000000000024e4d     0x11d5 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ .debug_info    0x0000000000026022      0xf09 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_info    0x0000000000026f2b      0x939 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+ .debug_info    0x0000000000027864      0x514 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
 .debug_abbrev   0x0000000000000000     0xbf4c
  .debug_abbrev  0x0000000000000000       0x12 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
@@ -15466,7 +15467,7 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000001648       0x28 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
-.debug_str      0x0000000000000000    0x8efa5
+.debug_str      0x0000000000000000    0x8effb
  .debug_str     0x0000000000000000       0xb2 Output/nrf52-ble-tutorial-characteristic Release/Obj/thumb_crt0.o
  .debug_str     0x00000000000000b2    0x70e27 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
                                       0x72ea3 (size before relaxing)
@@ -15514,51 +15515,51 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
                                       0x73918 (size before relaxing)
  .debug_str     0x000000000007ee83     0x6897 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
                                       0x79884 (size before relaxing)
- .debug_str     0x000000000008571a     0x412f Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
-                                      0x82333 (size before relaxing)
- .debug_str     0x0000000000089849      0x503 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
-                                      0x790a5 (size before relaxing)
- .debug_str     0x0000000000089d4c      0x490 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+ .debug_str     0x000000000008571a     0x4157 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+                                      0x8235b (size before relaxing)
+ .debug_str     0x0000000000089871      0x531 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+                                      0x790fb (size before relaxing)
+ .debug_str     0x0000000000089da2      0x490 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
                                       0x70b35 (size before relaxing)
- .debug_str     0x000000000008a1dc      0x2e0 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+ .debug_str     0x000000000008a232      0x2e0 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
                                       0x74462 (size before relaxing)
- .debug_str     0x000000000008a4bc      0x307 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_str     0x000000000008a512      0x307 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
                                       0x728ee (size before relaxing)
- .debug_str     0x000000000008a7c3      0x80c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+ .debug_str     0x000000000008a819      0x80c Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
                                       0x71e3a (size before relaxing)
- .debug_str     0x000000000008afcf      0x2c3 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+ .debug_str     0x000000000008b025      0x2c3 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
                                       0x6835c (size before relaxing)
- .debug_str     0x000000000008b292      0x6cd Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_str     0x000000000008b2e8      0x6cd Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
                                       0x7214e (size before relaxing)
- .debug_str     0x000000000008b95f      0x28d Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+ .debug_str     0x000000000008b9b5      0x28d Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
                                       0x70d6d (size before relaxing)
- .debug_str     0x000000000008bbec      0x80b Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_str     0x000000000008bc42      0x80b Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
                                       0x72e47 (size before relaxing)
- .debug_str     0x000000000008c3f7      0x4a2 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_str     0x000000000008c44d      0x4a2 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
                                       0x72fcb (size before relaxing)
- .debug_str     0x000000000008c899      0x208 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_str     0x000000000008c8ef      0x208 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
                                       0x71661 (size before relaxing)
- .debug_str     0x000000000008caa1      0x467 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_str     0x000000000008caf7      0x467 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
                                       0x712cf (size before relaxing)
- .debug_str     0x000000000008cf08      0x621 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_str     0x000000000008cf5e      0x621 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
                                       0x712fa (size before relaxing)
- .debug_str     0x000000000008d529       0xe9 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+ .debug_str     0x000000000008d57f       0xe9 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
                                       0x6fd3b (size before relaxing)
- .debug_str     0x000000000008d612      0x539 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+ .debug_str     0x000000000008d668      0x539 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
                                       0x72c72 (size before relaxing)
- .debug_str     0x000000000008db4b       0xef Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+ .debug_str     0x000000000008dba1       0xef Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
                                       0x69a62 (size before relaxing)
- .debug_str     0x000000000008dc3a       0x67 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+ .debug_str     0x000000000008dc90       0x67 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
                                       0x6a915 (size before relaxing)
- .debug_str     0x000000000008dca1      0x43d Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+ .debug_str     0x000000000008dcf7      0x43d Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
                                       0x727fb (size before relaxing)
- .debug_str     0x000000000008e0de      0x307 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ .debug_str     0x000000000008e134      0x307 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
                                       0x71e32 (size before relaxing)
- .debug_str     0x000000000008e3e5      0x46c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_str     0x000000000008e43b      0x46c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
                                       0x6e6b9 (size before relaxing)
- .debug_str     0x000000000008e851      0x5ff Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+ .debug_str     0x000000000008e8a7      0x5ff Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
                                       0x73445 (size before relaxing)
- .debug_str     0x000000000008ee50      0x155 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+ .debug_str     0x000000000008eea6      0x155 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
                                       0x6d64e (size before relaxing)
 
 .debug_ranges   0x0000000000000000     0x41b8
@@ -15608,7 +15609,7 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_ranges  0x00000000000040a0       0xc0 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .debug_ranges  0x0000000000004160       0x58 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
-.debug_frame    0x0000000000000000     0x454c
+.debug_frame    0x0000000000000000     0x4550
  .debug_frame   0x0000000000000000      0x12c Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
  .debug_frame   0x000000000000012c       0x58 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_error.o
  .debug_frame   0x0000000000000184       0x20 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_error_weak.o
@@ -15631,28 +15632,28 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_frame   0x0000000000001920      0x1a8 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .debug_frame   0x0000000000001ac8       0xa0 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
  .debug_frame   0x0000000000001b68      0x234 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_frame   0x0000000000001d9c       0xbc Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_frame   0x0000000000001e58      0x224 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
- .debug_frame   0x000000000000207c      0x188 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
- .debug_frame   0x0000000000002204      0x180 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
- .debug_frame   0x0000000000002384      0x364 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
- .debug_frame   0x00000000000026e8       0xf0 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
- .debug_frame   0x00000000000027d8      0x228 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_frame   0x0000000000002a00      0x198 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
- .debug_frame   0x0000000000002b98      0x420 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
- .debug_frame   0x0000000000002fb8       0xec Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
- .debug_frame   0x00000000000030a4       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
- .debug_frame   0x0000000000003150      0x27c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_frame   0x00000000000033cc      0x2a0 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_frame   0x000000000000366c      0x144 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
- .debug_frame   0x00000000000037b0      0x4c8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
- .debug_frame   0x0000000000003c78       0xb0 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
- .debug_frame   0x0000000000003d28       0xc4 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
- .debug_frame   0x0000000000003dec      0x24c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
- .debug_frame   0x0000000000004038      0x260 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- .debug_frame   0x0000000000004298      0x1a8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- .debug_frame   0x0000000000004440       0xc8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
- .debug_frame   0x0000000000004508       0x44 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+ .debug_frame   0x0000000000001d9c       0xc0 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_frame   0x0000000000001e5c      0x224 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+ .debug_frame   0x0000000000002080      0x188 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+ .debug_frame   0x0000000000002208      0x180 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_frame   0x0000000000002388      0x364 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+ .debug_frame   0x00000000000026ec       0xf0 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+ .debug_frame   0x00000000000027dc      0x228 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_frame   0x0000000000002a04      0x198 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+ .debug_frame   0x0000000000002b9c      0x420 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_frame   0x0000000000002fbc       0xec Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_frame   0x00000000000030a8       0xac Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_frame   0x0000000000003154      0x27c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_frame   0x00000000000033d0      0x2a0 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_frame   0x0000000000003670      0x144 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+ .debug_frame   0x00000000000037b4      0x4c8 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+ .debug_frame   0x0000000000003c7c       0xb0 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+ .debug_frame   0x0000000000003d2c       0xc4 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+ .debug_frame   0x0000000000003df0      0x24c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+ .debug_frame   0x000000000000403c      0x260 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ .debug_frame   0x000000000000429c      0x1a8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_frame   0x0000000000004444       0xc8 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+ .debug_frame   0x000000000000450c       0x44 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
 .debug_types    0x0000000000000000     0xbe00
  .debug_types   0x0000000000000000       0x99 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
@@ -15996,7 +15997,7 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_types   0x000000000000bd51       0x6b Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
  .debug_types   0x000000000000bdbc       0x44 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
 
-.debug_loc      0x0000000000000000    0x15cd1
+.debug_loc      0x0000000000000000    0x15d18
  .debug_loc     0x0000000000000000      0x406 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
  .debug_loc     0x0000000000000406       0xcd Output/nrf52-ble-tutorial-characteristic Release/Obj/app_error.o
  .debug_loc     0x00000000000004d3       0x4a Output/nrf52-ble-tutorial-characteristic Release/Obj/app_error_weak.o
@@ -16017,28 +16018,28 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_loc     0x000000000000871b      0xb28 Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o
  .debug_loc     0x0000000000009243      0x26e Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
  .debug_loc     0x00000000000094b1      0x965 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_loc     0x0000000000009e16      0x1cc Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_loc     0x0000000000009fe2     0x1203 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
- .debug_loc     0x000000000000b1e5      0xa3b Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
- .debug_loc     0x000000000000bc20      0xa09 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
- .debug_loc     0x000000000000c629      0x77a Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
- .debug_loc     0x000000000000cda3      0x31e Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
- .debug_loc     0x000000000000d0c1      0x681 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_loc     0x000000000000d742      0x52e Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
- .debug_loc     0x000000000000dc70     0x1240 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
- .debug_loc     0x000000000000eeb0      0xbbb Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
- .debug_loc     0x000000000000fa6b      0x2db Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
- .debug_loc     0x000000000000fd46      0x89f Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_loc     0x00000000000105e5     0x1043 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_loc     0x0000000000011628      0x428 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
- .debug_loc     0x0000000000011a50     0x1833 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
- .debug_loc     0x0000000000013283      0x37a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
- .debug_loc     0x00000000000135fd      0x41d Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
- .debug_loc     0x0000000000013a1a     0x112c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
- .debug_loc     0x0000000000014b46      0xb02 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- .debug_loc     0x0000000000015648      0x3a1 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- .debug_loc     0x00000000000159e9      0x251 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
- .debug_loc     0x0000000000015c3a       0x97 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+ .debug_loc     0x0000000000009e16      0x213 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_loc     0x000000000000a029     0x1203 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+ .debug_loc     0x000000000000b22c      0xa3b Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+ .debug_loc     0x000000000000bc67      0xa09 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_loc     0x000000000000c670      0x77a Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+ .debug_loc     0x000000000000cdea      0x31e Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+ .debug_loc     0x000000000000d108      0x681 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_loc     0x000000000000d789      0x52e Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+ .debug_loc     0x000000000000dcb7     0x1240 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_loc     0x000000000000eef7      0xbbb Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_loc     0x000000000000fab2      0x2db Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_loc     0x000000000000fd8d      0x89f Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_loc     0x000000000001062c     0x1043 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_loc     0x000000000001166f      0x428 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+ .debug_loc     0x0000000000011a97     0x1833 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+ .debug_loc     0x00000000000132ca      0x37a Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+ .debug_loc     0x0000000000013644      0x41d Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+ .debug_loc     0x0000000000013a61     0x112c Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+ .debug_loc     0x0000000000014b8d      0xb02 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ .debug_loc     0x000000000001568f      0x3a1 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_loc     0x0000000000015a30      0x251 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+ .debug_loc     0x0000000000015c81       0x97 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
 .debug_pubnames
                 0x0000000000000000    0x1611d
@@ -16222,7 +16223,7 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_pubtypes
                 0x0000000000006ba3      0x24c Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
 
-.debug_macro    0x0000000000000000     0xa9a4
+.debug_macro    0x0000000000000000     0xa9aa
  .debug_macro   0x0000000000000000      0x29d Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
  .debug_macro   0x000000000000029d       0x72 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
  .debug_macro   0x000000000000030f       0x49 Output/nrf52-ble-tutorial-characteristic Release/Obj/app_button.o
@@ -16330,51 +16331,51 @@ OUTPUT(Output/Release/Exe/nrf52-ble-tutorial-characteristic.elf elf32-littlearm)
  .debug_macro   0x0000000000006980       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o
  .debug_macro   0x000000000000699c      0x535 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
  .debug_macro   0x0000000000006ed1      0x343 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007214       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x000000000000722a       0x6a Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007294       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x00000000000072b6       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x00000000000072c6       0x82 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007348       0x42 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x000000000000738a       0x5a Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x00000000000073e4       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007406       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007416       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x000000000000742c       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007448       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007458       0x9e Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x00000000000074f6       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
- .debug_macro   0x0000000000007506      0x2c4 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_macro   0x00000000000077ca       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
- .debug_macro   0x00000000000077ec      0x1f6 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
- .debug_macro   0x00000000000079e2      0x278 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
- .debug_macro   0x0000000000007c5a      0x267 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
- .debug_macro   0x0000000000007ec1       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
- .debug_macro   0x0000000000007f01      0x269 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
- .debug_macro   0x000000000000816a      0x1ac Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
- .debug_macro   0x0000000000008316      0x27f Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_macro   0x0000000000008595       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_macro   0x00000000000085a5       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
- .debug_macro   0x00000000000085b5      0x25f Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
- .debug_macro   0x0000000000008814      0x283 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
- .debug_macro   0x0000000000008a97       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
- .debug_macro   0x0000000000008ad7      0x228 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
- .debug_macro   0x0000000000008cff       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
- .debug_macro   0x0000000000008d0f      0x1e9 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
- .debug_macro   0x0000000000008ef8       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
- .debug_macro   0x0000000000008f0e      0x260 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_macro   0x000000000000916e       0x3a Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_macro   0x00000000000091a8       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
- .debug_macro   0x00000000000091be      0x26f Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_macro   0x000000000000942d       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_macro   0x0000000000009469       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
- .debug_macro   0x0000000000009479      0x236 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
- .debug_macro   0x00000000000096af      0x2e5 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
- .debug_macro   0x0000000000009994      0x14d Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
- .debug_macro   0x0000000000009ae1      0x193 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
- .debug_macro   0x0000000000009c74      0x273 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
- .debug_macro   0x0000000000009ee7      0x27d Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
- .debug_macro   0x000000000000a164      0x243 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- .debug_macro   0x000000000000a3a7      0x16b Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
- .debug_macro   0x000000000000a512      0x278 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
- .debug_macro   0x000000000000a78a      0x21a Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o
+ .debug_macro   0x0000000000007214       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x0000000000007230       0x6a Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000729a       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x00000000000072bc       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x00000000000072cc       0x82 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000734e       0x42 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x0000000000007390       0x5a Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x00000000000073ea       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000740c       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000741c       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x0000000000007432       0x1c Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000744e       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000745e       0x9e Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x00000000000074fc       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o
+ .debug_macro   0x000000000000750c      0x2c4 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_macro   0x00000000000077d0       0x22 Output/nrf52-ble-tutorial-characteristic Release/Obj/our_service.o
+ .debug_macro   0x00000000000077f2      0x1f6 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advdata.o
+ .debug_macro   0x00000000000079e8      0x278 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_advertising.o
+ .debug_macro   0x0000000000007c60      0x267 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_macro   0x0000000000007ec7       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_params.o
+ .debug_macro   0x0000000000007f07      0x269 Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_conn_state.o
+ .debug_macro   0x0000000000008170      0x1ac Output/nrf52-ble-tutorial-characteristic Release/Obj/ble_srv_common.o
+ .debug_macro   0x000000000000831c      0x27f Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_macro   0x000000000000859b       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_macro   0x00000000000085ab       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/gatt_cache_manager.o
+ .debug_macro   0x00000000000085bb      0x25f Output/nrf52-ble-tutorial-characteristic Release/Obj/gatts_cache_manager.o
+ .debug_macro   0x000000000000881a      0x283 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_macro   0x0000000000008a9d       0x40 Output/nrf52-ble-tutorial-characteristic Release/Obj/id_manager.o
+ .debug_macro   0x0000000000008add      0x228 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_macro   0x0000000000008d05       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_gatt.o
+ .debug_macro   0x0000000000008d15      0x1e9 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_macro   0x0000000000008efe       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_ble_qwr.o
+ .debug_macro   0x0000000000008f14      0x260 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_macro   0x0000000000009174       0x3a Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_macro   0x00000000000091ae       0x16 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_data_storage.o
+ .debug_macro   0x00000000000091c4      0x26f Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_macro   0x0000000000009433       0x3c Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_macro   0x000000000000946f       0x10 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_database.o
+ .debug_macro   0x000000000000947f      0x236 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_id.o
+ .debug_macro   0x00000000000096b5      0x2e5 Output/nrf52-ble-tutorial-characteristic Release/Obj/peer_manager.o
+ .debug_macro   0x000000000000999a      0x14d Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_buffer.o
+ .debug_macro   0x0000000000009ae7      0x193 Output/nrf52-ble-tutorial-characteristic Release/Obj/pm_mutex.o
+ .debug_macro   0x0000000000009c7a      0x273 Output/nrf52-ble-tutorial-characteristic Release/Obj/security_dispatcher.o
+ .debug_macro   0x0000000000009eed      0x27d Output/nrf52-ble-tutorial-characteristic Release/Obj/security_manager.o
+ .debug_macro   0x000000000000a16a      0x243 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_macro   0x000000000000a3ad      0x16b Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh.o
+ .debug_macro   0x000000000000a518      0x278 Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_ble.o
+ .debug_macro   0x000000000000a790      0x21a Output/nrf52-ble-tutorial-characteristic Release/Obj/nrf_sdh_soc.o

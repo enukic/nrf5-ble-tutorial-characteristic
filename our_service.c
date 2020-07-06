@@ -35,18 +35,26 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
 {
     // OUR_JOB: Step 2.A, Add a custom characteristic UUID
     uint32_t            err_code;
-    ble_uuid_t          char_uuid;
+    ble_uuid_t          char_uuid,char_uuid2;
     ble_uuid128_t       base_uuid = BLE_UUID_OUR_BASE_UUID;
     char_uuid.uuid      = BLE_UUID_OUR_CHARACTERISTC_UUID;
     err_code = sd_ble_uuid_vs_add(&base_uuid, &char_uuid.type);
     APP_ERROR_CHECK(err_code); 
 
+    char_uuid2.uuid     =BLE_UUID_OUR_CHARACTERISTC_UUID2;
+    err_code = sd_ble_uuid_vs_add(&base_uuid, &char_uuid2.type);
+    APP_ERROR_CHECK(err_code); 
+
     
     // OUR_JOB: Step 2.F Add read/write properties to our characteristic
-    ble_gatts_char_md_t char_md;
+    ble_gatts_char_md_t char_md, char_md2;
     memset(&char_md, 0, sizeof(char_md));
     char_md.char_props.read = 1;
     char_md.char_props.write = 1;
+
+    memset(&char_md2, 0, sizeof(char_md2));
+    char_md2.char_props.read = 1;
+    char_md2.char_props.write = 1;
 
 
 
@@ -65,9 +73,12 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
    
     
     // OUR_JOB: Step 2.B, Configure the attribute metadata
-    ble_gatts_attr_md_t attr_md;
+    ble_gatts_attr_md_t attr_md, attr_md2;
     memset(&attr_md, 0, sizeof(attr_md));
-    attr_md.vloc        = BLE_GATTS_VLOC_STACK;  
+    attr_md.vloc        = BLE_GATTS_VLOC_STACK; 
+
+    memset(&attr_md2, 0, sizeof(attr_md2));
+    attr_md2.vloc        = BLE_GATTS_VLOC_STACK;  
 
 	
     
@@ -78,11 +89,14 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
 
     
     // OUR_JOB: Step 2.C, Configure the characteristic value attribute
-    ble_gatts_attr_t    attr_char_value;
+    ble_gatts_attr_t    attr_char_value, attr_char_value2;
     memset(&attr_char_value, 0, sizeof(attr_char_value));    
     attr_char_value.p_uuid      = &char_uuid;
     attr_char_value.p_attr_md   = &attr_md;
 
+    memset(&attr_char_value2, 0, sizeof(attr_char_value2));    
+    attr_char_value2.p_uuid      = &char_uuid2;
+    attr_char_value2.p_attr_md   = &attr_md2;
 
 
     
@@ -97,6 +111,12 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
     err_code = sd_ble_gatts_characteristic_add(p_our_service->service_handle,
                                        &char_md,
                                        &attr_char_value,
+                                       &p_our_service->char_handles);
+    APP_ERROR_CHECK(err_code);
+
+    err_code = sd_ble_gatts_characteristic_add(p_our_service->service_handle,
+                                       &char_md2,
+                                       &attr_char_value2,
                                        &p_our_service->char_handles);
     APP_ERROR_CHECK(err_code);
 
