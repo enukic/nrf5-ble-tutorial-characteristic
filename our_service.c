@@ -50,24 +50,31 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
     ble_gatts_char_md_t char_md, char_md2;
     memset(&char_md, 0, sizeof(char_md));
     char_md.char_props.read = 1;
-    char_md.char_props.write = 1;
+//    char_md.char_props.write = 1;
 
     memset(&char_md2, 0, sizeof(char_md2));
     char_md2.char_props.read = 1;
-    char_md2.char_props.write = 1;
+//    char_md2.char_props.write = 1;
 
 
 
 
     
     // OUR_JOB: Step 3.A, Configuring Client Characteristic Configuration Descriptor metadata and add to char_md structure
-    ble_gatts_attr_md_t cccd_md;
+    ble_gatts_attr_md_t cccd_md,cccd_md2;
     memset(&cccd_md, 0, sizeof(cccd_md));
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md.read_perm);
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md.write_perm);
     cccd_md.vloc                = BLE_GATTS_VLOC_STACK;    
     char_md.p_cccd_md           = &cccd_md;
     char_md.char_props.notify   = 1;
+
+    memset(&cccd_md2, 0, sizeof(cccd_md2));
+    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md2.read_perm);
+    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md2.write_perm);
+    cccd_md2.vloc                = BLE_GATTS_VLOC_STACK;    
+    char_md2.p_cccd_md           = &cccd_md2;
+    char_md2.char_props.notify   = 1;
 
 
    
@@ -85,7 +92,10 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
     
     // OUR_JOB: Step 2.G, Set read/write security levels to our characteristic
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
-    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
+//    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
+
+    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md2.read_perm);
+//    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md2.write_perm);
 
     
     // OUR_JOB: Step 2.C, Configure the characteristic value attribute
@@ -106,6 +116,10 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
     uint8_t value[4]            = {0x12,0x34,0x56,0x78};
     attr_char_value.p_value     = value;
 
+    attr_char_value2.max_len     = 4;
+    attr_char_value2.init_len    = 4;
+    attr_char_value2.p_value     = value;
+
 
     // OUR_JOB: Step 2.E, Add our new characteristic to the service
     err_code = sd_ble_gatts_characteristic_add(p_our_service->service_handle,
@@ -117,7 +131,7 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
     err_code = sd_ble_gatts_characteristic_add(p_our_service->service_handle,
                                        &char_md2,
                                        &attr_char_value2,
-                                       &p_our_service->char_handles);
+                                       &p_our_service->char_handles2);
     APP_ERROR_CHECK(err_code);
 
     return NRF_SUCCESS;
@@ -169,6 +183,28 @@ void our_temperature_characteristic_update(ble_os_t *p_our_service, int32_t *tem
         hvx_params.offset = 0;
         hvx_params.p_len  = &len;
         hvx_params.p_data = (uint8_t*)temperature_value;  
+
+        sd_ble_gatts_hvx(p_our_service->conn_handle, &hvx_params);
+    }
+
+
+}
+
+
+void our_saadc_characteristic_update(ble_os_t *p_our_service, int16_t *adc_value)
+{
+    // OUR_JOB: Step 3.E, Update characteristic value
+    if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)
+    {
+        uint16_t               len = 4;
+        ble_gatts_hvx_params_t hvx_params;
+        memset(&hvx_params, 0, sizeof(hvx_params));
+
+        hvx_params.handle = p_our_service->char_handles2.value_handle;
+        hvx_params.type   = BLE_GATT_HVX_NOTIFICATION;
+        hvx_params.offset = 0;
+        hvx_params.p_len  = &len;
+        hvx_params.p_data = (uint8_t*)adc_value;  
 
         sd_ble_gatts_hvx(p_our_service->conn_handle, &hvx_params);
     }

@@ -41,6 +41,7 @@
 "Output/nrf52-ble-tutorial-characteristic Release/Obj/nrfx_prs.o"
 "Output/nrf52-ble-tutorial-characteristic Release/Obj/nrfx_uart.o"
 "Output/nrf52-ble-tutorial-characteristic Release/Obj/nrfx_uarte.o"
+"Output/nrf52-ble-tutorial-characteristic Release/Obj/nrfx_saadc.o"
 "Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp.o"
 "Output/nrf52-ble-tutorial-characteristic Release/Obj/bsp_btn_ble.o"
 "Output/nrf52-ble-tutorial-characteristic Release/Obj/main.o"

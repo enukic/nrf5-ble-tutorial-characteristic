@@ -24,6 +24,7 @@ typedef struct
     uint16_t                    service_handle; /**< Handle of Our Service (as provided by the BLE stack). */
     // OUR_JOB: Step 2.D, Add handles for the characteristic attributes to our struct
     ble_gatts_char_handles_t    char_handles;
+    ble_gatts_char_handles_t    char_handles2;
 }ble_os_t;
 
 /**@brief Function for handling BLE Stack events related to our service and characteristic.
@@ -49,5 +50,8 @@ void our_service_init(ble_os_t * p_our_service);
  * @param[in]   characteristic_value     New characteristic value.
  */
 void our_temperature_characteristic_update(ble_os_t *p_our_service, int32_t *temperature_value);
+
+
+void our_saadc_characteristic_update(ble_os_t *p_our_service, int16_t *temperature_value);
 
 #endif  /* _ OUR_SERVICE_H__ */

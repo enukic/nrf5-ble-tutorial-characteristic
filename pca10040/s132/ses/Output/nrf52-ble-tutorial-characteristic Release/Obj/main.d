@@ -107,4 +107,7 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/main.o: \
  d:\sdk15\components\libraries\experimental_memobj\nrf_memobj.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.50/include/stdlib.h \
  d:\sdk15\components\libraries\balloc\nrf_balloc.h \
- d:\sdk15\components\libraries\experimental_log\nrf_log_default_backends.h
+ d:\sdk15\components\libraries\experimental_log\nrf_log_default_backends.h \
+ d:\sdk15\integration\nrfx\legacy\nrf_drv_saadc.h \
+ d:\sdk15\modules\nrfx\drivers\include\nrfx_saadc.h \
+ d:\sdk15\modules\nrfx\hal\nrf_saadc.h

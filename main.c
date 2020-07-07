@@ -69,6 +69,7 @@
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
+#include "nrf_drv_saadc.h"
 
 #include "our_service.h"
 
@@ -100,6 +101,7 @@
 #define SEC_PARAM_MAX_KEY_SIZE          16                                      /**< Maximum encryption key size. */
 
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
+#define SAMPLES_IN_BUFFER               1
 
 
 NRF_BLE_GATT_DEF(m_gatt);                                                       /**< GATT module instance. */
@@ -107,6 +109,24 @@ NRF_BLE_QWR_DEF(m_qwr);                                                         
 BLE_ADVERTISING_DEF(m_advertising);                                             /**< Advertising module instance. */
 
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
+//static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
+static int16_t adc_val;
+
+#define ADC_REF_VOLTAGE_IN_MILLIVOLTS     600      /**< Reference voltage (in milli volts) used by ADC while doing conversion. */
+#define ADC_PRE_SCALING_COMPENSATION      6        /**< The ADC is configured to use VDD with 1/3 prescaling as input. And hence the result of conversion is to be multiplied by 3 to get the actual value of the battery voltage.*/
+#define ADC_RES_8BIT                     1023   
+
+#define ADC_RESULT_IN_MILLI_VOLTS(ADC_VALUE)\
+        ((((ADC_VALUE) * ADC_REF_VOLTAGE_IN_MILLIVOLTS) / ADC_RES_8BIT) * ADC_PRE_SCALING_COMPENSATION)
+
+
+static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
+static nrf_saadc_value_t     m_adc_value;
+static uint32_t              m_adc_evt_counter;
+uint16_t voltage;
+
+
+
 
 // FROM_SERVICE_TUTORIAL: Declare a service structure for our application
 ble_os_t m_our_service;
@@ -115,6 +135,9 @@ ble_os_t m_our_service;
 // OUR_JOB: Step 3.G, Declare an app_timer id variable and define our timer interval and define a timer interval
 APP_TIMER_DEF(m_our_char_timer_id);
 #define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(1000) // 1000 ms intervals
+
+APP_TIMER_DEF(m_our_char_timer_id2);
+//#define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(1000) // 1000 ms intervals
 
 
 // Use UUIDs for service(s) used in your application.
@@ -151,8 +174,23 @@ static void timer_timeout_handler(void * p_context)
     // OUR_JOB: Step 3.F, Update temperature and characteristic value.
     int32_t temperature = 0;   
     sd_temp_get(&temperature);
+    temperature=temperature/4;
     our_temperature_characteristic_update(&m_our_service, &temperature);
+//    nrf_drv_saadc_sample();
+//    our_saadc_characteristic_update(&m_our_service, &adc_val);
     nrf_gpio_pin_toggle(LED_4);
+}
+
+static void timer_timeout_handler2(void * p_context)
+{
+    // OUR_JOB: Step 3.F, Update temperature and characteristic value.
+//    int32_t temperature = 0;   
+//    sd_temp_get(&temperature);
+//    temperature=temperature/4;
+//    our_temperature_characteristic_update(&m_our_service, &temperature);
+    nrf_drv_saadc_sample();
+//    our_saadc_characteristic_update(&m_our_service, &adc_val);
+    nrf_gpio_pin_toggle(LED_3);
 }
 
 
@@ -268,6 +306,7 @@ static void timers_init(void)
 
     // OUR_JOB: Step 3.H, Initiate our timer
     app_timer_create(&m_our_char_timer_id, APP_TIMER_MODE_REPEATED, timer_timeout_handler);
+    app_timer_create(&m_our_char_timer_id2, APP_TIMER_MODE_REPEATED, timer_timeout_handler2);
 }
 
 
@@ -407,6 +446,7 @@ static void application_timers_start(void)
 
     // OUR_JOB: Step 3.I, Start our timer
     app_timer_start(m_our_char_timer_id, OUR_CHAR_TIMER_INTERVAL, NULL);
+    app_timer_start(m_our_char_timer_id2, OUR_CHAR_TIMER_INTERVAL, NULL);
 
 }
 
@@ -750,6 +790,48 @@ static void advertising_start(bool erase_bonds)
 }
 
 
+void saadc_callback(nrf_drv_saadc_evt_t const * p_event)
+{
+    if (p_event->type == NRF_DRV_SAADC_EVT_DONE)
+    {
+        ret_code_t err_code;
+        
+
+        err_code = nrf_drv_saadc_buffer_convert(p_event->data.done.p_buffer, SAMPLES_IN_BUFFER);
+        APP_ERROR_CHECK(err_code);
+        int16_t adc_val2 = *p_event->data.done.p_buffer;
+        our_saadc_characteristic_update(&m_our_service, &(adc_val2));
+
+//        int i;
+//        NRF_LOG_INFO("ADC event number: %d", (int)m_adc_evt_counter);
+//        for (i = 0; i < SAMPLES_IN_BUFFER; i++)
+//        {
+//            NRF_LOG_INFO("ADC Value: %d mV", ADC_RESULT_IN_MILLI_VOLTS(p_event->data.done.p_buffer[i]));
+//        }
+//        m_adc_evt_counter++;
+//        NRF_LOG_FLUSH();
+    }
+}
+
+
+
+
+void saadc_init(void)
+{
+    ret_code_t err_code;
+    nrf_saadc_channel_config_t channel_config =
+        NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_AIN0);
+
+    err_code = nrf_drv_saadc_init(NULL, saadc_callback);
+    APP_ERROR_CHECK(err_code);
+
+    err_code = nrf_drv_saadc_channel_init(0, &channel_config);
+    APP_ERROR_CHECK(err_code);
+
+    err_code = nrf_drv_saadc_buffer_convert(m_buffer_pool[0], SAMPLES_IN_BUFFER);
+    APP_ERROR_CHECK(err_code);
+}
+
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -772,6 +854,8 @@ int main(void)
 
     conn_params_init();
     peer_manager_init();
+
+    saadc_init();
 
     // Start execution.
     NRF_LOG_INFO("OurCharacteristics tutorial started.");
