@@ -34,13 +34,14 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/app_error_weak.o: \
  d:\sdk15\components\libraries\util\nrf_assert.h \
  d:\sdk15\components\libraries\experimental_section_vars\nrf_section.h \
  d:\sdk15\components\libraries\util\nordic_common.h \
+ d:\sdk15\components\libraries\strerror\nrf_strerror.h \
+ d:\sdk15\components\libraries\util\sdk_errors.h \
  d:\sdk15\components\libraries\experimental_log\src\nrf_log_internal.h \
  d:\sdk15\components\libraries\util\app_util.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_instance.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_ctrl.h \
- d:\sdk15\components\libraries\util\sdk_errors.h \
  d:\sdk15\components\libraries\experimental_log\src\nrf_log_ctrl_internal.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_backend_interface.h \
  d:\sdk15\components\libraries\experimental_memobj\nrf_memobj.h \
@@ -53,7 +54,6 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/app_error_weak.o: \
  d:\sdk15\components\softdevice\s132\headers\nrf_error_soc.h \
  d:\sdk15\components\softdevice\s132\headers\nrf_nvic.h \
  d:\sdk15\components\libraries\util\app_error.h \
- d:\sdk15\components\libraries\strerror\nrf_strerror.h \
  d:\sdk15\components\softdevice\s132\headers\nrf_sdm.h \
  d:\sdk15\components\softdevice\s132\headers\nrf_error_sdm.h \
  d:\sdk15\components\softdevice\s132\headers\nrf_soc.h

@@ -25,4 +25,48 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/nrf_log_backend_uart.o: \
  d:\sdk15\modules\nrfx\mdk\nrf52_name_change.h \
  d:\sdk15\modules\nrfx\mdk\compiler_abstraction.h \
  d:\sdk15\components\libraries\util\sdk_macros.h \
- d:\sdk15\components\libraries\util\nrf_assert.h
+ d:\sdk15\components\libraries\util\nrf_assert.h \
+ d:\sdk15\components\libraries\experimental_log\nrf_log_backend_uart.h \
+ d:\sdk15\components\libraries\experimental_log\nrf_log_backend_interface.h \
+ d:\sdk15\components\libraries\experimental_memobj\nrf_memobj.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.50/include/stdlib.h \
+ d:\sdk15\components\libraries\util\sdk_errors.h \
+ d:\sdk15\components\libraries\balloc\nrf_balloc.h \
+ d:\sdk15\components\libraries\util\app_util_platform.h \
+ d:\sdk15\components\softdevice\s132\headers\nrf_soc.h \
+ d:\sdk15\components\softdevice\s132\headers\nrf_svc.h \
+ d:\sdk15\components\softdevice\s132\headers\nrf_error.h \
+ d:\sdk15\components\softdevice\s132\headers\nrf_error_soc.h \
+ d:\sdk15\components\softdevice\s132\headers\nrf_nvic.h \
+ d:\sdk15\components\libraries\util\app_error.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.50/include/stdio.h \
+ d:\sdk15\components\libraries\util\app_error_weak.h \
+ d:\sdk15\components\libraries\util\app_util.h \
+ d:\sdk15\components\libraries\experimental_log\nrf_log_instance.h \
+ d:\sdk15\components\libraries\experimental_section_vars\nrf_section.h \
+ d:\sdk15\components\libraries\util\nordic_common.h \
+ d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \
+ D:\SDK15\components\libraries\experimental_log\src\nrf_log_backend_serial.h \
+ d:\sdk15\components\libraries\experimental_log\nrf_log_backend_interface.h \
+ d:\sdk15\external\fprintf\nrf_fprintf.h \
+ D:\SDK15\components\libraries\experimental_log\src\nrf_log_internal.h \
+ d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \
+ d:\sdk15\integration\nrfx\legacy\nrf_drv_uart.h \
+ d:\sdk15\modules\nrfx\nrfx.h d:\sdk15\integration\nrfx\nrfx_config.h \
+ d:\sdk15\modules\nrfx\drivers\nrfx_common.h \
+ d:\sdk15\modules\nrfx\mdk\nrf_peripherals.h \
+ d:\sdk15\modules\nrfx\mdk\nrf52832_peripherals.h \
+ d:\sdk15\integration\nrfx\nrfx_glue.h \
+ d:\sdk15\integration\nrfx\legacy\apply_old_config.h \
+ d:\sdk15\modules\nrfx\soc\nrfx_irqs.h \
+ d:\sdk15\modules\nrfx\soc\nrfx_irqs_nrf52832.h \
+ d:\sdk15\components\libraries\util\nrf_assert.h \
+ d:\sdk15\modules\nrfx\soc\nrfx_coredep.h \
+ d:\sdk15\components\libraries\util\sdk_resources.h \
+ d:\sdk15\components\softdevice\s132\headers\nrf_sd_def.h \
+ d:\sdk15\modules\nrfx\drivers\nrfx_errors.h \
+ d:\sdk15\modules\nrfx\drivers\include\nrfx_uarte.h \
+ d:\sdk15\modules\nrfx\hal\nrf_uarte.h \
+ d:\sdk15\modules\nrfx\drivers\include\nrfx_uart.h \
+ d:\sdk15\modules\nrfx\hal\nrf_uart.h \
+ d:\sdk15\components\libraries\util\app_error.h

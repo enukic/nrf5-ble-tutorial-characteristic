@@ -48,6 +48,7 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/nrf_sdh.o: \
  d:\sdk15\components\libraries\util\app_error.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log.h \
  d:\sdk15\components\libraries\experimental_section_vars\nrf_section.h \
+ d:\sdk15\components\libraries\strerror\nrf_strerror.h \
  d:\sdk15\components\libraries\experimental_log\src\nrf_log_internal.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_instance.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \

@@ -36,5 +36,6 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/nrf_atfifo.o: \
  d:\sdk15\components\libraries\util\app_util.h \
  d:\sdk15\components\libraries\util\sdk_macros.h \
  d:\sdk15\components\libraries\util\nrf_assert.h \
+ d:\sdk15\components\libraries\strerror\nrf_strerror.h \
  d:\sdk15\components\libraries\experimental_log\src\nrf_log_internal.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_types.h

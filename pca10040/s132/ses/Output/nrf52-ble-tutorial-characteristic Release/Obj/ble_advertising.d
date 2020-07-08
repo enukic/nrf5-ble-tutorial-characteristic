@@ -46,13 +46,14 @@ Output/nrf52-ble-tutorial-characteristic\ Release/Obj/ble_advertising.o: \
  d:\sdk15\components\libraries\experimental_log\nrf_log.h \
  d:\sdk15\components\libraries\experimental_section_vars\nrf_section.h \
  d:\sdk15\components\libraries\util\nordic_common.h \
+ d:\sdk15\components\libraries\strerror\nrf_strerror.h \
+ d:\sdk15\components\libraries\util\sdk_errors.h \
  d:\sdk15\components\libraries\experimental_log\src\nrf_log_internal.h \
  d:\sdk15\components\libraries\util\app_util.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_instance.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \
  d:\sdk15\components\libraries\experimental_log\nrf_log_types.h \
  d:\sdk15\components\libraries\fstorage\nrf_fstorage.h \
- d:\sdk15\components\libraries\util\sdk_errors.h \
  d:\sdk15\components\softdevice\common\nrf_sdh_ble.h \
  d:\sdk15\components\libraries\experimental_section_vars\nrf_section_iter.h \
  d:\sdk15\components\libraries\experimental_section_vars\nrf_section.h \

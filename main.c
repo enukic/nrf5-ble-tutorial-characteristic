@@ -188,7 +188,7 @@ static void timer_timeout_handler2(void * p_context)
 //    sd_temp_get(&temperature);
 //    temperature=temperature/4;
 //    our_temperature_characteristic_update(&m_our_service, &temperature);
-    nrf_drv_saadc_sample();
+//    nrf_drv_saadc_sample();
 //    our_saadc_characteristic_update(&m_our_service, &adc_val);
     nrf_gpio_pin_toggle(LED_3);
 }
@@ -799,8 +799,8 @@ void saadc_callback(nrf_drv_saadc_evt_t const * p_event)
 
         err_code = nrf_drv_saadc_buffer_convert(p_event->data.done.p_buffer, SAMPLES_IN_BUFFER);
         APP_ERROR_CHECK(err_code);
-        int16_t adc_val2 = *p_event->data.done.p_buffer;
-        our_saadc_characteristic_update(&m_our_service, &(adc_val2));
+        adc_val = p_event->data.done.p_buffer;
+        our_saadc_characteristic_update(&m_our_service, &(adc_val));
 
 //        int i;
 //        NRF_LOG_INFO("ADC event number: %d", (int)m_adc_evt_counter);
