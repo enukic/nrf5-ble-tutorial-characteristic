@@ -110,20 +110,27 @@ BLE_ADVERTISING_DEF(m_advertising);                                             
 
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
 //static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
-static int16_t adc_val;
+//static int16_t adc_val;
 
-#define ADC_REF_VOLTAGE_IN_MILLIVOLTS     600      /**< Reference voltage (in milli volts) used by ADC while doing conversion. */
-#define ADC_PRE_SCALING_COMPENSATION      6        /**< The ADC is configured to use VDD with 1/3 prescaling as input. And hence the result of conversion is to be multiplied by 3 to get the actual value of the battery voltage.*/
-#define ADC_RES_8BIT                     1023   
+#define ADC_REF_VOLTAGE_IN_MILLIVOLTS   600                                     /**< Reference voltage (in milli volts) used by ADC while doing conversion. */
+#define ADC_PRE_SCALING_COMPENSATION    6                                       /**< The ADC is configured to use VDD with 1/3 prescaling as input. And hence the result of conversion is to be multiplied by 3 to get the actual value of the battery voltage.*/
+#define DIODE_FWD_VOLT_DROP_MILLIVOLTS  270                                     /**< Typical forward voltage drop of the diode . */
+#define ADC_RES_10BIT                   1024                                    /**< Maximum digital value for 10-bit ADC conversion. */
+
+//#define ADC_RESULT_IN_MILLI_VOLTS(ADC_VALUE)\
+//        ((((ADC_VALUE) * ADC_REF_VOLTAGE_IN_MILLIVOLTS) / ADC_RES_8BIT) * ADC_PRE_SCALING_COMPENSATION)
 
 #define ADC_RESULT_IN_MILLI_VOLTS(ADC_VALUE)\
-        ((((ADC_VALUE) * ADC_REF_VOLTAGE_IN_MILLIVOLTS) / ADC_RES_8BIT) * ADC_PRE_SCALING_COMPENSATION)
+        ((((ADC_VALUE) * ADC_REF_VOLTAGE_IN_MILLIVOLTS) / ADC_RES_10BIT) * ADC_PRE_SCALING_COMPENSATION)
 
 
 static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
 static nrf_saadc_value_t     m_adc_value;
 static uint32_t              m_adc_evt_counter;
-uint16_t voltage;
+//uint16_t voltage;
+
+nrf_saadc_value_t adc_result;
+uint16_t          batt_lvl_in_milli_volts;
 
 
 
@@ -188,9 +195,10 @@ static void timer_timeout_handler2(void * p_context)
 //    sd_temp_get(&temperature);
 //    temperature=temperature/4;
 //    our_temperature_characteristic_update(&m_our_service, &temperature);
-//    nrf_drv_saadc_sample();
-//    our_saadc_characteristic_update(&m_our_service, &adc_val);
+    nrf_drv_saadc_sample();
+    
     nrf_gpio_pin_toggle(LED_3);
+    our_saadc_characteristic_update(&m_our_service, &batt_lvl_in_milli_volts);
 }
 
 
@@ -796,20 +804,16 @@ void saadc_callback(nrf_drv_saadc_evt_t const * p_event)
     {
         ret_code_t err_code;
         
+        adc_result = p_event->data.done.p_buffer[0];
 
         err_code = nrf_drv_saadc_buffer_convert(p_event->data.done.p_buffer, SAMPLES_IN_BUFFER);
         APP_ERROR_CHECK(err_code);
-        adc_val = p_event->data.done.p_buffer;
-        our_saadc_characteristic_update(&m_our_service, &(adc_val));
 
-//        int i;
-//        NRF_LOG_INFO("ADC event number: %d", (int)m_adc_evt_counter);
-//        for (i = 0; i < SAMPLES_IN_BUFFER; i++)
-//        {
-//            NRF_LOG_INFO("ADC Value: %d mV", ADC_RESULT_IN_MILLI_VOLTS(p_event->data.done.p_buffer[i]));
-//        }
-//        m_adc_evt_counter++;
-//        NRF_LOG_FLUSH();
+        batt_lvl_in_milli_volts = ADC_RESULT_IN_MILLI_VOLTS(adc_result) +
+                                  0;
+
+        NRF_LOG_INFO("adc val: %x", batt_lvl_in_milli_volts);
+
     }
 }
 
