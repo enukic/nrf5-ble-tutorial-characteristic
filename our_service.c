@@ -115,7 +115,7 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
     attr_char_value.init_len    = 4;
     uint8_t value[4]            = {0x12,0x34,0x56,0x78};
     attr_char_value.p_value     = value;
-
+    
     attr_char_value2.max_len     = 4;
     attr_char_value2.init_len    = 4;
     attr_char_value2.p_value     = value;
@@ -182,7 +182,8 @@ void our_temperature_characteristic_update(ble_os_t *p_our_service, int32_t *tem
         hvx_params.type   = BLE_GATT_HVX_NOTIFICATION;
         hvx_params.offset = 0;
         hvx_params.p_len  = &len;
-        hvx_params.p_data = (uint8_t*)temperature_value;  
+        hvx_params.p_data = (uint8_t*)temperature_value;
+        
 
         sd_ble_gatts_hvx(p_our_service->conn_handle, &hvx_params);
     }
