@@ -6,6 +6,11 @@
 #include "ble_srv_common.h"
 #include "app_error.h"
 
+
+#include "nrf_log.h"
+#include "nrf_log_ctrl.h"
+#include "nrf_log_default_backends.h"
+
 // ALREADY_DONE_FOR_YOU: Declaration of a function that will take care of some housekeeping of ble connections related to our service and characteristic
 void ble_our_service_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
 {
@@ -197,7 +202,7 @@ void our_saadc_characteristic_update(ble_os_t *p_our_service, int16_t *adc_value
     // OUR_JOB: Step 3.E, Update characteristic value
     if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)
     {
-        uint16_t               len = 4;
+        uint16_t               len = 2;
         ble_gatts_hvx_params_t hvx_params;
         memset(&hvx_params, 0, sizeof(hvx_params));
 
@@ -206,6 +211,8 @@ void our_saadc_characteristic_update(ble_os_t *p_our_service, int16_t *adc_value
         hvx_params.offset = 0;
         hvx_params.p_len  = &len;
         hvx_params.p_data = (uint8_t*)adc_value;  
+
+        NRF_LOG_INFO("adc val: %x", *hvx_params.p_data);
 
         sd_ble_gatts_hvx(p_our_service->conn_handle, &hvx_params);
     }
