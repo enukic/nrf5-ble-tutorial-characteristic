@@ -862,7 +862,7 @@ int main(void)
     saadc_init();
 
     // Start execution.
-    NRF_LOG_INFO("OurCharacteristics tutorial started.");
+    NRF_LOG_INFO("Program started.");
     application_timers_start();
 
     advertising_start(erase_bonds);

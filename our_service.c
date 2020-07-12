@@ -116,13 +116,14 @@ static uint32_t our_char_add(ble_os_t * p_our_service)
 
     
     // OUR_JOB: Step 2.H, Set characteristic length in number of bytes
-    attr_char_value.max_len     = 4;
-    attr_char_value.init_len    = 4;
-    uint8_t value[4]            = {0x12,0x34,0x56,0x78};
+    attr_char_value.max_len     = 1;
+    attr_char_value.init_len    = 1;
+    uint8_t value[1]            = {0};
     attr_char_value.p_value     = value;
     
-    attr_char_value2.max_len     = 4;
-    attr_char_value2.init_len    = 4;
+    uint8_t value2[2]            = {0,0};
+    attr_char_value2.max_len     = 2;
+    attr_char_value2.init_len    = 2;
     attr_char_value2.p_value     = value;
 
 
@@ -179,7 +180,7 @@ void our_temperature_characteristic_update(ble_os_t *p_our_service, int32_t *tem
     // OUR_JOB: Step 3.E, Update characteristic value
     if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)
     {
-        uint16_t               len = 4;
+        uint16_t               len = 1;
         ble_gatts_hvx_params_t hvx_params;
         memset(&hvx_params, 0, sizeof(hvx_params));
 
@@ -212,7 +213,7 @@ void our_saadc_characteristic_update(ble_os_t *p_our_service, int16_t *adc_value
         hvx_params.p_len  = &len;
         hvx_params.p_data = (uint8_t*)adc_value;  
 
-        NRF_LOG_INFO("adc val: %x", *hvx_params.p_data);
+//        NRF_LOG_INFO("adc val: %x", *hvx_params.p_data);
 
         sd_ble_gatts_hvx(p_our_service->conn_handle, &hvx_params);
     }
