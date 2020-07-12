@@ -1,43 +1,3 @@
-/**
- * Copyright (c) 2014 - 2018, Nordic Semiconductor ASA
- * 
- * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- * 
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 
- * 2. Redistributions in binary form, except as embedded into a Nordic
- *    Semiconductor ASA integrated circuit in a product or a software update for
- *    such product, must reproduce the above copyright notice, this list of
- *    conditions and the following disclaimer in the documentation and/or other
- *    materials provided with the distribution.
- * 
- * 3. Neither the name of Nordic Semiconductor ASA nor the names of its
- *    contributors may be used to endorse or promote products derived from this
- *    software without specific prior written permission.
- * 
- * 4. This software, with or without modification, must only be used with a
- *    Nordic Semiconductor ASA integrated circuit.
- * 
- * 5. Any software provided in binary form under this license must not be reverse
- *    engineered, decompiled, modified and/or disassembled.
- * 
- * THIS SOFTWARE IS PROVIDED BY NORDIC SEMICONDUCTOR ASA "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY, NONINFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL NORDIC SEMICONDUCTOR ASA OR CONTRIBUTORS BE
- * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
- * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- * GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
- * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- * 
- */
-
 #include "our_service.h"
 
 #include <stdbool.h>
@@ -74,7 +34,7 @@
 #include "our_service.h"
 
 
-#define DEVICE_NAME                     "OurCharacteristic"                       /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                     "Test"                       /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME               "NordicSemiconductor"                   /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                300                                     /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
 
@@ -101,7 +61,7 @@
 #define SEC_PARAM_MAX_KEY_SIZE          16                                      /**< Maximum encryption key size. */
 
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
-#define SAMPLES_IN_BUFFER               1
+
 
 
 NRF_BLE_GATT_DEF(m_gatt);                                                       /**< GATT module instance. */
@@ -109,25 +69,17 @@ NRF_BLE_QWR_DEF(m_qwr);                                                         
 BLE_ADVERTISING_DEF(m_advertising);                                             /**< Advertising module instance. */
 
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
-//static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
-//static int16_t adc_val;
 
 #define ADC_REF_VOLTAGE_IN_MILLIVOLTS   600                                     /**< Reference voltage (in milli volts) used by ADC while doing conversion. */
 #define ADC_PRE_SCALING_COMPENSATION    6                                       /**< The ADC is configured to use VDD with 1/3 prescaling as input. And hence the result of conversion is to be multiplied by 3 to get the actual value of the battery voltage.*/
 #define DIODE_FWD_VOLT_DROP_MILLIVOLTS  270                                     /**< Typical forward voltage drop of the diode . */
 #define ADC_RES_10BIT                   1024                                    /**< Maximum digital value for 10-bit ADC conversion. */
 
-//#define ADC_RESULT_IN_MILLI_VOLTS(ADC_VALUE)\
-//        ((((ADC_VALUE) * ADC_REF_VOLTAGE_IN_MILLIVOLTS) / ADC_RES_8BIT) * ADC_PRE_SCALING_COMPENSATION)
-
+#define SAMPLES_IN_BUFFER               1
 #define ADC_RESULT_IN_MILLI_VOLTS(ADC_VALUE)\
         ((((ADC_VALUE) * ADC_REF_VOLTAGE_IN_MILLIVOLTS) / ADC_RES_10BIT) * ADC_PRE_SCALING_COMPENSATION)
 
-
 static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
-static nrf_saadc_value_t     m_adc_value;
-static uint32_t              m_adc_evt_counter;
-//uint16_t voltage;
 
 nrf_saadc_value_t adc_result;
 uint16_t          batt_lvl_in_milli_volts;
@@ -139,12 +91,10 @@ uint16_t          batt_lvl_in_milli_volts;
 ble_os_t m_our_service;
 
 
-// OUR_JOB: Step 3.G, Declare an app_timer id variable and define our timer interval and define a timer interval
 APP_TIMER_DEF(m_our_char_timer_id);
 #define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(1000) // 1000 ms intervals
 
 APP_TIMER_DEF(m_our_char_timer_id2);
-//#define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(1000) // 1000 ms intervals
 
 
 // Use UUIDs for service(s) used in your application.
@@ -175,26 +125,18 @@ void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
 
 
 
-// ALREADY_DONE_FOR_YOU: This is a timer event handler
 static void timer_timeout_handler(void * p_context)
 {
-    // OUR_JOB: Step 3.F, Update temperature and characteristic value.
     int32_t temperature = 0;   
     sd_temp_get(&temperature);
     temperature=temperature/4;
     our_temperature_characteristic_update(&m_our_service, &temperature);
-//    nrf_drv_saadc_sample();
-//    our_saadc_characteristic_update(&m_our_service, &adc_val);
+
     nrf_gpio_pin_toggle(LED_4);
 }
 
 static void timer_timeout_handler2(void * p_context)
 {
-    // OUR_JOB: Step 3.F, Update temperature and characteristic value.
-//    int32_t temperature = 0;   
-//    sd_temp_get(&temperature);
-//    temperature=temperature/4;
-//    our_temperature_characteristic_update(&m_our_service, &temperature);
     nrf_drv_saadc_sample();
     
     nrf_gpio_pin_toggle(LED_3);
@@ -311,8 +253,6 @@ static void timers_init(void)
     ret_code_t err_code = app_timer_init();
     APP_ERROR_CHECK(err_code);
 
-
-    // OUR_JOB: Step 3.H, Initiate our timer
     app_timer_create(&m_our_char_timer_id, APP_TIMER_MODE_REPEATED, timer_timeout_handler);
     app_timer_create(&m_our_char_timer_id2, APP_TIMER_MODE_REPEATED, timer_timeout_handler2);
 }
