@@ -93,6 +93,7 @@ ble_os_t m_our_service;
 
 APP_TIMER_DEF(m_our_char_timer_id);
 #define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(1000) // 1000 ms intervals
+#define OUR_CHAR_TIMER_INTERVAL2     APP_TIMER_TICKS(1100) // 1000 ms intervals
 
 APP_TIMER_DEF(m_our_char_timer_id2);
 
@@ -137,7 +138,12 @@ static void timer_timeout_handler(void * p_context)
 
 static void timer_timeout_handler2(void * p_context)
 {
-    nrf_drv_saadc_sample();
+//    nrf_drv_saadc_sample();
+    nrf_drv_saadc_sample_convert(0, &adc_result);
+
+    batt_lvl_in_milli_volts = ADC_RESULT_IN_MILLI_VOLTS(adc_result) +
+                                  0;
+
     
     nrf_gpio_pin_toggle(LED_3);
     our_saadc_characteristic_update(&m_our_service, &batt_lvl_in_milli_volts);
@@ -394,7 +400,7 @@ static void application_timers_start(void)
 
     // OUR_JOB: Step 3.I, Start our timer
     app_timer_start(m_our_char_timer_id, OUR_CHAR_TIMER_INTERVAL, NULL);
-    app_timer_start(m_our_char_timer_id2, OUR_CHAR_TIMER_INTERVAL, NULL);
+    app_timer_start(m_our_char_timer_id2, OUR_CHAR_TIMER_INTERVAL2, NULL);
 
 }
 

@@ -25,6 +25,7 @@
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;Application"/>
+  <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;Board Definition"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;Board Support"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;nRF_BLE"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;nRF_Drivers"/>
@@ -62,18 +63,13 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="785" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="183" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.c" selected="0" top="163" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="293" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s132/headers/ble_gatts.h" selected="0" top="274" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="210" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s132/headers/ble_gatt.h" selected="0" top="191" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="98" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="80" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="774" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s132/headers/nrf_soc.h" selected="0" top="762" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="65" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error.c" selected="0" top="39" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="430" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_uarte.h" selected="0" top="420" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="662" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/ble/ble_advertising/ble_advertising.c" selected="0" top="624" codecName=""/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="306" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_ble.c" selected="0" top="238" codecName=""/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="385" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh.c" selected="0" top="362" codecName=""/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="791" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="781" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="4" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.c" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_saadc.h" selected="0" top="87" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="42" useTextEdit="1" useBinaryEdit="0" left="0" path="nrfx_saadc.c" selected="0" top="36" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="247" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_saadc.h" selected="0" top="229" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="260" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_saadc.h" selected="0" top="248" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="nrf52-ble-tutorial-characteristic" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="C:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s&#xa;D:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s&#xa;D:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s&#xa;C:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s" fileDialogInitialDirectory="C:/SDK15/modules/nrfx/mdk" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
