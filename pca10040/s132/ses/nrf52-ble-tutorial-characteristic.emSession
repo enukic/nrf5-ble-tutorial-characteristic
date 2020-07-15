@@ -26,10 +26,8 @@
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;Application"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;Board Support"/>
-  <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;nRF_BLE"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;nRF_Drivers"/>
   <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;nRF_Libraries"/>
-  <ProjectSessionItem path="nrf52-ble-tutorial-characteristic;nrf52-ble-tutorial-characteristic;nRF_SoftDevice"/>
  </Project>
  <Register1>
   <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;SAADC/TASKS_START;SAADC/TASKS_SAMPLE;SAADC/TASKS_STOP;SAADC/TASKS_CALIBRATEOFFSET;SAADC/EVENTS_STARTED;SAADC/EVENTS_END;SAADC/EVENTS_DONE;SAADC/EVENTS_RESULTDONE;SAADC/EVENTS_CALIBRATEDONE;SAADC/EVENTS_STOPPED;SAADC/INTEN;SAADC/INTENSET;SAADC/INTENCLR;SAADC/STATUS;SAADC/ENABLE;SAADC/RESOLUTION;SAADC/OVERSAMPLE;SAADC/SAMPLERATE;SAADC/EVENTS_CH[0].LIMITH;SAADC/EVENTS_CH[0].LIMITL;SAADC/EVENTS_CH[1].LIMITH;SAADC/EVENTS_CH[1].LIMITL;SAADC/EVENTS_CH[2].LIMITH;SAADC/EVENTS_CH[2].LIMITL;SAADC/EVENTS_CH[3].LIMITH;SAADC/EVENTS_CH[3].LIMITL;SAADC/EVENTS_CH[4].LIMITH;SAADC/EVENTS_CH[4].LIMITL;SAADC/EVENTS_CH[5].LIMITH;SAADC/EVENTS_CH[5].LIMITL;SAADC/EVENTS_CH[6].LIMITH;SAADC/EVENTS_CH[6].LIMITL;SAADC/EVENTS_CH[7].LIMITH;SAADC/EVENTS_CH[7].LIMITL;SAADC/CH[0].PSELP;SAADC/CH[0].PSELN;SAADC/CH[0].CONFIG;SAADC/CH[0].LIMIT;SAADC/CH[1].PSELP;SAADC/CH[1].PSELN;SAADC/CH[1].CONFIG;SAADC/CH[1].LIMIT;SAADC/CH[2].PSELP;SAADC/CH[2].PSELN;SAADC/CH[2].CONFIG;SAADC/CH[2].LIMIT;SAADC/CH[3].PSELP;SAADC/CH[3].PSELN;SAADC/CH[3].CONFIG;SAADC/CH[3].LIMIT;SAADC/CH[4].PSELP;SAADC/CH[4].PSELN;SAADC/CH[4].CONFIG;SAADC/CH[4].LIMIT;SAADC/CH[5].PSELP;SAADC/CH[5].PSELN;SAADC/CH[5].CONFIG;SAADC/CH[5].LIMIT;SAADC/CH[6].PSELP;SAADC/CH[6].PSELN;SAADC/CH[6].CONFIG;SAADC/CH[6].LIMIT;SAADC/CH[7].PSELP;SAADC/CH[7].PSELN;SAADC/CH[7].CONFIG;SAADC/CH[7].LIMIT;SAADC/RESULT.PTR;SAADC/RESULT.MAXCNT;SAADC/RESULT.AMOUNT" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context;SAADC;SAADC/RESULT.PTR" name="nrf52-ble-tutorial-characteristic" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -62,9 +60,9 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="785" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="775" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="183" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.c" selected="0" top="163" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="774" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="767" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="46" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.c" selected="0" top="1" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="45" y="26" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../our_service.h" selected="0" top="15" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="293" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s132/headers/ble_gatts.h" selected="0" top="274" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="210" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s132/headers/ble_gatt.h" selected="0" top="191" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="98" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="80" codecName="Default"/>
@@ -74,6 +72,9 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="662" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/ble/ble_advertising/ble_advertising.c" selected="0" top="624" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="306" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_ble.c" selected="0" top="238" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="385" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh.c" selected="0" top="362" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="91" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_saadc.h" selected="0" top="60" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="42" useTextEdit="1" useBinaryEdit="0" left="0" path="nrfx_saadc.c" selected="0" top="24" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="71" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_saadc.h" selected="0" top="65" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="nrf52-ble-tutorial-characteristic" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="C:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s&#xa;D:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s&#xa;D:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s&#xa;C:/SDK15/modules/nrfx/mdk/ses_nrf52_Vectors.s" fileDialogInitialDirectory="C:/SDK15/modules/nrfx/mdk" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

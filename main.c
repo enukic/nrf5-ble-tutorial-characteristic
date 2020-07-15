@@ -138,11 +138,11 @@ static void timer_timeout_handler(void * p_context)
 
 static void timer_timeout_handler2(void * p_context)
 {
-//    nrf_drv_saadc_sample();
     nrf_drv_saadc_sample_convert(0, &adc_result);
 
     batt_lvl_in_milli_volts = ADC_RESULT_IN_MILLI_VOLTS(adc_result) +
                                   0;
+    NRF_LOG_INFO("adc val: [%d]  [%x]", batt_lvl_in_milli_volts,batt_lvl_in_milli_volts);
 
     
     nrf_gpio_pin_toggle(LED_3);
@@ -746,24 +746,8 @@ static void advertising_start(bool erase_bonds)
 
 void saadc_callback(nrf_drv_saadc_evt_t const * p_event)
 {
-    if (p_event->type == NRF_DRV_SAADC_EVT_DONE)
-    {
-        ret_code_t err_code;
-        
-        adc_result = p_event->data.done.p_buffer[0];
-
-        err_code = nrf_drv_saadc_buffer_convert(p_event->data.done.p_buffer, SAMPLES_IN_BUFFER);
-        APP_ERROR_CHECK(err_code);
-
-        batt_lvl_in_milli_volts = ADC_RESULT_IN_MILLI_VOLTS(adc_result) +
-                                  0;
-
-        NRF_LOG_INFO("adc val: %x", batt_lvl_in_milli_volts);
-
-    }
+// Dummy callback function
 }
-
-
 
 
 void saadc_init(void)
@@ -772,14 +756,13 @@ void saadc_init(void)
     nrf_saadc_channel_config_t channel_config =
         NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_AIN0);
 
+
     err_code = nrf_drv_saadc_init(NULL, saadc_callback);
     APP_ERROR_CHECK(err_code);
 
     err_code = nrf_drv_saadc_channel_init(0, &channel_config);
     APP_ERROR_CHECK(err_code);
 
-    err_code = nrf_drv_saadc_buffer_convert(m_buffer_pool[0], SAMPLES_IN_BUFFER);
-    APP_ERROR_CHECK(err_code);
 }
 
 /**@brief Function for application main entry.
