@@ -32,7 +32,7 @@
 #include "nrf_drv_saadc.h"
 
 #include "our_service.h"
-
+#include "app_scheduler.h"
 
 #define DEVICE_NAME                     "Test"                       /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME               "NordicSemiconductor"                   /**< Manufacturer. Will be passed to Device Information Service. */
@@ -83,6 +83,12 @@ static nrf_saadc_value_t     m_buffer_pool[2][SAMPLES_IN_BUFFER];
 
 nrf_saadc_value_t adc_result;
 uint16_t          batt_lvl_in_milli_volts;
+
+//SCHEDULER
+// Scheduler settings
+#define SCHED_MAX_EVENT_DATA_SIZE   MAX(sizeof(bsp_event_t), APP_TIMER_SCHED_EVENT_DATA_SIZE)
+//#define SCHED_MAX_EVENT_DATA_SIZE   APP_TIMER_SCHED_EVENT_DATA_SIZE
+#define SCHED_QUEUE_SIZE            10
 
 
 
@@ -600,15 +606,11 @@ static void delete_bonds(void)
 }
 
 
-/**@brief Function for handling events from the BSP module.
- *
- * @param[in]   event   Event generated when button is pressed.
- */
-static void bsp_event_handler(bsp_event_t event)
+void bsp_scheduler_event_handler(void *p_event_data, uint16_t event_size)
 {
     ret_code_t err_code;
 
-    switch (event)
+    switch (*(bsp_event_t*)p_event_data)
     {
         case BSP_EVENT_SLEEP:
             sleep_mode_enter();
@@ -637,8 +639,15 @@ static void bsp_event_handler(bsp_event_t event)
         default:
             break;
     }
+}
 
-
+/**@brief Function for handling events from the BSP module.
+ *
+ * @param[in]   event   Event generated when button is pressed.
+ */
+static void bsp_event_handler(bsp_event_t event)
+{
+    app_sched_event_put(&event, sizeof(event), bsp_scheduler_event_handler);
 
 }
 
@@ -772,6 +781,7 @@ int main(void)
     bool erase_bonds;
 
     // Initialize.
+    
     log_init();
     timers_init();
     buttons_leds_init(&erase_bonds);
@@ -789,6 +799,8 @@ int main(void)
     peer_manager_init();
 
     saadc_init();
+    
+    APP_SCHED_INIT(SCHED_MAX_EVENT_DATA_SIZE, SCHED_QUEUE_SIZE);
 
     // Start execution.
     NRF_LOG_INFO("Program started.");
@@ -799,6 +811,7 @@ int main(void)
     // Enter main loop.
     for (;;)
     {
+        app_sched_execute();
         idle_state_handle();
     }
 }
